@@ -1,0 +1,126 @@
+/* Fixed Navbar Styles */
+.navbar-fixed {
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+/* Add padding to body for fixed navbar */
+.main-content {
+    padding-top: 80px;
+}
+
+/* Dark theme styles */
+.dark-theme {
+    background-color: #1a1a1a !important;
+    color: #ffffff !important;
+}
+
+.dark-theme .navbar {
+    background-color: #2d2d2d !important;
+}
+
+.dark-theme .navbar-brand span {
+    color: #ffffff !important;
+}
+
+.dark-theme .nav-link {
+    color: #ffffff !important;
+}
+
+.dark-theme .card,
+.dark-theme .pod,
+.dark-theme .po,
+.dark-theme .bod>div,
+.dark-theme .title {
+    background-color: #3d3d3d !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+.dark-theme footer {
+    background-color: #1a1a1a !important;
+}
+
+.dark-theme .InputContainer input {
+    background-color: #3d3d3d !important;
+    color: #ffffff !important;
+    border: 1px solid #555 !important;
+}
+
+.dark-theme .ratt img {
+    border: 2px solid #555 !important;
+}
+
+/* Language direction support */
+.rtl {
+    direction: rtl;
+    text-align: right;
+}
+
+.rtl .navbar-nav {
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.rtl .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+.rtl .me-3 {
+    margin-left: 1rem !important;
+    margin-right: 0 !important;
+}
+
+/* Responsive navbar improvements */
+@media (max-width: 768px) {
+    .main-content {
+        padding-top: 60px;
+    }
+
+    .navbar-brand span {
+        font-size: 1.2rem;
+    }
+
+    .d-flex.align-items-center {
+        margin-top: 10px;
+    }
+}
+
+/* Improved button styles */
+.btn-outline-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
+
+.dark-theme .btn-outline-secondary {
+    border-color: #6c757d;
+    color: #6c757d;
+}
+
+.dark-theme .btn-outline-secondary:hover {
+    background-color: #6c757d;
+    border-color: #6c757d;
+    color: #fff;
+}
+
+/* Dropdown improvements */
+.dropdown-menu {
+    border-radius: 0.375rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.dark-theme .dropdown-menu {
+    background-color: #3d3d3d;
+    border-color: #555;
+}
+
+.dark-theme .dropdown-item {
+    color: #ffffff;
+}
+
+.dark-theme .dropdown-item:hover {
+    background-color: #555;
+    color: #ffffff;
+}
