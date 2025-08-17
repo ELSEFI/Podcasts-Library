@@ -30,8 +30,8 @@
 
         <!-- Collapsible navbar content -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <!-- Main navigation links in the center -->
-          <ul class="navbar-nav mx-auto">
+          <!-- Main navigation links moved to the right -->
+          <ul class="navbar-nav ms-auto">
             <li class="nav-item px-2">
               <a href="index.html" class="nav-link active" aria-current="page">
                 <i class="fas fa-home me-2"></i>Home
@@ -96,18 +96,18 @@
             </li>
           </ul>
 
-          <!-- Right side controls -->
-          <div class="d-flex align-items-center navbar-controls">
+          <!-- Controls section after contact -->
+          <div class="d-flex align-items-center navbar-controls ms-3">
             <!-- Search toggle button -->
-            <button class="btn btn-outline-light btn-sm me-3" type="button" id="searchToggle"
-              onclick="toggleSearch()" title="Search">
+            <button class="btn btn-outline-light btn-sm me-2" type="button" id="searchToggle" onclick="toggleSearch()"
+              title="Search">
               <i class="fas fa-search"></i>
             </button>
 
             <!-- Language selector -->
-            <div class="dropdown me-3">
-              <button class="btn btn-outline-light btn-sm" type="button" id="languageDropdown"
-                data-bs-toggle="dropdown" aria-expanded="false" title="Language">
+            <div class="dropdown me-2">
+              <button class="btn btn-outline-light btn-sm" type="button" id="languageDropdown" data-bs-toggle="dropdown"
+                aria-expanded="false" title="Language">
                 <i class="fas fa-globe"></i>
               </button>
               <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
@@ -132,8 +132,8 @@
         <div class="collapse w-100" id="searchCollapse">
           <div class="search-container mt-2">
             <form class="d-flex" role="search">
-              <input class="form-control search-input" type="search" placeholder="Search podcasts..." aria-label="Search"
-                id="navSearchInput">
+              <input class="form-control search-input" type="search" placeholder="Search podcasts..."
+                aria-label="Search" id="navSearchInput">
               <button class="btn btn-success ms-2" type="button" onclick="searchFromNav()">
                 <i class="fas fa-search"></i>
               </button>

@@ -88,9 +88,13 @@
     transform: translateX(5px);
 }
 
-/* Right controls styling */
+/* Controls styling - positioned after contact link */
 .navbar-controls {
-    gap: 0.5rem;
+    gap: 0.25rem;
+}
+
+.navbar-controls.ms-3 {
+    margin-left: 1rem !important;
 }
 
 .btn-outline-light {
@@ -153,10 +157,10 @@
     color: rgba(255, 255, 255, 0.7);
 }
 
-/* Center navigation links */
-.navbar-nav.mx-auto {
+/* Right-aligned navigation links */
+.navbar-nav.ms-auto {
     margin-left: auto !important;
-    margin-right: auto !important;
+    margin-right: 0 !important;
 }
 
 /* Mobile responsive design */
@@ -185,7 +189,7 @@
     }
 
     /* Mobile layout adjustments */
-    .navbar-nav.mx-auto {
+    .navbar-nav.ms-auto {
         margin: 1.5rem 0 !important;
         padding-top: 1.5rem;
         border-top: 1px solid #333;
@@ -202,11 +206,19 @@
     }
 
     .navbar-controls {
-        margin-top: 1.5rem;
+        margin: 1.5rem auto 0;
         padding-top: 1.5rem;
         border-top: 1px solid #333;
         justify-content: center;
-        gap: 1rem;
+        gap: 0.75rem;
+        order: 3;
+    }
+
+    .navbar-nav.ms-auto {
+        order: 1;
+        margin: 1.5rem 0 !important;
+        padding-top: 1.5rem;
+        border-top: 1px solid #333;
     }
 
     .btn-outline-light {
@@ -290,107 +302,116 @@
 
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
-/* Dark theme enhancements for black navbar */
-.dark-theme .navbar-fixed.navbar-black {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
-    border-bottom: 2px solid #444;
-}
 
-.dark-theme .brand-text {
-    color: #00d4ff !important;
-}
+    /* Dark theme enhancements for black navbar */
+    .dark-theme .navbar-fixed.navbar-black {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+        border-bottom: 2px solid #444;
+    }
 
-.dark-theme .dropdown-menu {
-    background: #0a0a0a;
-    border-color: #444;
-}
+    .dark-theme .brand-text {
+        color: #00d4ff !important;
+    }
 
-.dark-theme .dropdown-item {
-    color: #ffffff !important;
-}
+    .dark-theme .dropdown-menu {
+        background: #0a0a0a;
+        border-color: #444;
+    }
 
-.dark-theme .dropdown-item:hover {
-    background: linear-gradient(45deg, #007bff, #00d4ff);
-    color: #ffffff !important;
-}
+    .dark-theme .dropdown-item {
+        color: #ffffff !important;
+    }
 
-.dark-theme .search-input {
-    background: rgba(255, 255, 255, 0.05);
-    border-color: rgba(255, 255, 255, 0.2);
-}
+    .dark-theme .dropdown-item:hover {
+        background: linear-gradient(45deg, #007bff, #00d4ff);
+        color: #ffffff !important;
+    }
 
-.dark-theme .search-input:focus {
-    background: rgba(255, 255, 255, 0.1);
-    border-color: #00d4ff;
-}
+    .dark-theme .search-input {
+        background: rgba(255, 255, 255, 0.05);
+        border-color: rgba(255, 255, 255, 0.2);
+    }
 
-.dark-theme #searchCollapse {
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-    border-color: #444;
-}
+    .dark-theme .search-input:focus {
+        background: rgba(255, 255, 255, 0.1);
+        border-color: #00d4ff;
+    }
 
-/* RTL Support */
-[dir="rtl"] .brand-text {
-    margin-right: 15px;
-    margin-left: 0;
-}
+    .dark-theme #searchCollapse {
+        background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+        border-color: #444;
+    }
 
-[dir="rtl"] .navbar-nav {
-    margin-right: auto;
-    margin-left: 0;
-}
+    /* RTL Support */
+    [dir="rtl"] .brand-text {
+        margin-right: 15px;
+        margin-left: 0;
+    }
 
-[dir="rtl"] .dropdown-menu-end {
-    --bs-position: start;
-}
+    [dir="rtl"] .navbar-nav {
+        margin-right: auto;
+        margin-left: 0;
+    }
 
-[dir="rtl"] .nav-link i {
-    margin-left: 8px !important;
-    margin-right: 0 !important;
-}
+    [dir="rtl"] .dropdown-menu-end {
+        --bs-position: start;
+    }
 
-/* Modern hover effects */
-.navbar-nav .nav-link::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    width: 0;
-    height: 2px;
-    background: linear-gradient(45deg, #007bff, #00d4ff);
-    transition: all 0.3s ease;
-    transform: translateX(-50%);
-}
+    [dir="rtl"] .nav-link i {
+        margin-left: 8px !important;
+        margin-right: 0 !important;
+    }
 
-.navbar-nav .nav-link:hover::before {
-    width: 80%;
-}
+    /* Modern hover effects */
+    .navbar-nav .nav-link::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 0;
+        height: 2px;
+        background: linear-gradient(45deg, #007bff, #00d4ff);
+        transition: all 0.3s ease;
+        transform: translateX(-50%);
+    }
 
-.navbar-nav .nav-link.active::before {
-    width: 100%;
-}
+    .navbar-nav .nav-link:hover::before {
+        width: 80%;
+    }
 
-/* Loading animation for dropdowns */
-.dropdown-menu {
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-}
+    .navbar-nav .nav-link.active::before {
+        width: 100%;
+    }
 
-.dropdown-menu.show {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-}
+    /* Loading animation for dropdowns */
+    .dropdown-menu {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+    }
 
-/* Pulse effect for buttons */
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4); }
-    70% { box-shadow: 0 0 0 10px rgba(0, 212, 255, 0); }
-    100% { box-shadow: 0 0 0 0 rgba(0, 212, 255, 0); }
-}
+    .dropdown-menu.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
 
-.btn-outline-light:active {
-    animation: pulse 0.6s ease-out;
-}
+    /* Pulse effect for buttons */
+    @keyframes pulse {
+        0% {
+            box-shadow: 0 0 0 0 rgba(0, 212, 255, 0.4);
+        }
+
+        70% {
+            box-shadow: 0 0 0 10px rgba(0, 212, 255, 0);
+        }
+
+        100% {
+            box-shadow: 0 0 0 0 rgba(0, 212, 255, 0);
+        }
+    }
+
+    .btn-outline-light:active {
+        animation: pulse 0.6s ease-out;
+    }
