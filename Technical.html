@@ -7,58 +7,15 @@
   <title>Technical Podcasts</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
   <link rel="stylesheet" href="stylees.css">
+  <link rel="stylesheet" href="navbar-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-  <style>
-    /* Fixed navbar styles */
-    .navbar-fixed {
-      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-      z-index: 1000;
-    }
-
-    /* Add padding to body for fixed navbar */
-    .main-content {
-      padding-top: 80px;
-    }
-
-    /* Dark theme styles */
-    .dark-theme {
-      background-color: #1a1a1a !important;
-      color: #ffffff !important;
-    }
-
-    .dark-theme .navbar {
-      background-color: #2d2d2d !important;
-    }
-
-    .dark-theme .card,
-    .dark-theme .pod,
-    .dark-theme .po {
-      background-color: #3d3d3d !important;
-      color: #ffffff !important;
-    }
-
-    .dark-theme footer {
-      background-color: #1a1a1a !important;
-    }
-
-    /* Language direction support */
-    .rtl {
-      direction: rtl;
-      text-align: right;
-    }
-
-    .rtl .navbar-nav {
-      margin-right: auto;
-      margin-left: 0;
-    }
-  </style>
 </head>
 
 <body>
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-fixed">
       <div class="container-fluid">
-        <!-- Logo and Brand -->
+        <!-- Logo and Brand on the left -->
         <a class="navbar-brand" href="index.html">
           <img src="image/_d1959416-a926-4cf5-ae6e-82a5c2d3802b.jpeg" alt="Logo" width="40" height="40"
             class="d-inline-block align-text-top">
@@ -71,36 +28,76 @@
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation items -->
+        <!-- Collapsible navbar content -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto">
+          <!-- Main navigation links in the center-left -->
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0">
             <li class="nav-item">
               <a href="index.html" class="nav-link">Home</a>
             </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle active" href="#" id="categoriesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                <li><a class="dropdown-item" href="Business.html">Business</a></li>
+                <li><a class="dropdown-item active" href="Technical.html">Technical</a></li>
+                <li><a class="dropdown-item" href="Science.html">Science</a></li>
+                <li><a class="dropdown-item" href="Health & Wellness.html">Health & Wellness</a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Art & Entertainment.html">Art & Entertainment</a></li>
+                <li><a class="dropdown-item" href="sports.html">Sports</a></li>
+                <li><a class="dropdown-item" href="Personal.html">Personal</a></li>
+                <li><a class="dropdown-item" href="Social.html">Social</a></li>
+                <li><a class="dropdown-item" href="Self-development.html">Self-development</a></li>
+                <li><a class="dropdown-item" href="News & Media.html">News & Media</a></li>
+                <li><a class="dropdown-item" href="Education and culture.html">Education & Culture</a></li>
+                <li><a class="dropdown-item" href="General.html">General</a></li>
+              </ul>
+            </li>
             <li class="nav-item">
               <a href="https://www.podcastinsights.com/what-is-a-podcast/" class="nav-link" target="_blank">
-                What Is Podcast?
+                About Podcasts
               </a>
             </li>
             <li class="nav-item">
-              <a href="#wrapper" class="nav-link">Contact with us</a>
+              <a href="#wrapper" class="nav-link">Contact</a>
             </li>
           </ul>
 
-          <!-- Language and Theme buttons on the right -->
+          <!-- Right side controls -->
           <div class="d-flex align-items-center">
-            <div class="dropdown me-3">
-              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown"
-                data-bs-toggle="dropdown" aria-expanded="false">
+            <!-- Search form -->
+            <form class="d-flex me-3" role="search">
+              <input class="form-control" type="search" placeholder="Search technical podcasts..." aria-label="Search"
+                id="navSearchInput">
+              <button class="btn btn-outline-success ms-1" type="button" onclick="searchFromNav()">
+                <i class="fas fa-search"></i>
+              </button>
+            </form>
+
+            <!-- Language selector -->
+            <div class="dropdown me-2">
+              <button class="btn btn-outline-secondary btn-sm" type="button" id="languageDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" title="Language">
                 <i class="fas fa-globe"></i> EN
               </button>
-              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
-                <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">العربية</a></li>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                    <i class="flag-icon flag-icon-us me-2"></i>English
+                  </a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">
+                    <i class="flag-icon flag-icon-sa me-2"></i>العربية
+                  </a></li>
               </ul>
             </div>
 
-            <button class="btn btn-outline-secondary" type="button" id="themeToggle" onclick="toggleTheme()">
+            <!-- Theme toggle -->
+            <button class="btn btn-outline-secondary btn-sm" type="button" id="themeToggle" onclick="toggleTheme()"
+              title="Toggle Theme">
               <i class="fas fa-moon" id="themeIcon"></i>
             </button>
           </div>
@@ -311,8 +308,9 @@
       </footer>
 
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="common-functions.js"></script>
       <script>
-        // Search functionality
+        // Search functionality specific to technical page
         function searchPodcasts() {
           const searchInput = document.getElementById('searchInput');
           const filter = searchInput.value.toLowerCase();
@@ -328,91 +326,36 @@
           });
         }
 
-        // Theme toggle functionality
-        function toggleTheme() {
-          const body = document.body;
-          const themeIcon = document.getElementById('themeIcon');
+        // Search from navbar
+        function searchFromNav() {
+          const navSearchInput = document.getElementById('navSearchInput');
+          const mainSearchInput = document.getElementById('searchInput');
 
-          body.classList.toggle('dark-theme');
+          // Copy search term to main search input
+          if (mainSearchInput && navSearchInput) {
+            mainSearchInput.value = navSearchInput.value;
+            searchPodcasts();
 
-          if (body.classList.contains('dark-theme')) {
-            themeIcon.className = 'fas fa-sun';
-            localStorage.setItem('theme', 'dark');
-          } else {
-            themeIcon.className = 'fas fa-moon';
-            localStorage.setItem('theme', 'light');
+            // Scroll to podcasts section
+            const podcastsSection = document.querySelector('.headd');
+            if (podcastsSection) {
+              podcastsSection.scrollIntoView({ behavior: 'smooth' });
+            }
           }
         }
 
-        // Language change functionality
-        function changeLanguage(lang) {
-          const body = document.body;
-          const languageButton = document.getElementById('languageDropdown');
-
-          if (lang === 'ar') {
-            body.classList.add('rtl');
-            body.setAttribute('dir', 'rtl');
-            languageButton.innerHTML = '<i class="fas fa-globe"></i> AR';
-
-            // Update text content to Arabic
-            updateTextToArabic();
-            localStorage.setItem('language', 'ar');
-          } else {
-            body.classList.remove('rtl');
-            body.setAttribute('dir', 'ltr');
-            languageButton.innerHTML = '<i class="fas fa-globe"></i> EN';
-
-            // Update text content to English
-            updateTextToEnglish();
-            localStorage.setItem('language', 'en');
-          }
-        }
-
-        // Update text to Arabic
-        function updateTextToArabic() {
-          document.querySelector('.navbar-brand span').textContent = 'مكتبة البودكاست';
-          const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-          if (navLinks[0]) navLinks[0].textContent = 'الرئيسية';
-          if (navLinks[1]) navLinks[1].textContent = 'ما هو البودكاست؟';
-          if (navLinks[2]) navLinks[2].textContent = 'تواصل معنا';
-
-          const searchInput = document.getElementById('searchInput');
-          if (searchInput) searchInput.placeholder = 'البحث عن بودكاست تقني...';
-
-          const pageTitle = document.querySelector('.headd');
-          if (pageTitle) pageTitle.innerHTML = '<b>البودكاستات التقنية</b>';
-        }
-
-        // Update text to English
-        function updateTextToEnglish() {
-          document.querySelector('.navbar-brand span').textContent = 'Ur Podcasts';
-          const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-          if (navLinks[0]) navLinks[0].textContent = 'Home';
-          if (navLinks[1]) navLinks[1].textContent = 'What Is Podcast?';
-          if (navLinks[2]) navLinks[2].textContent = 'Contact with us';
-
-          const searchInput = document.getElementById('searchInput');
-          if (searchInput) searchInput.placeholder = 'Search For Technical Podcasts..';
-
-          const pageTitle = document.querySelector('.headd');
-          if (pageTitle) pageTitle.innerHTML = '<b>Technical Podcasts</b>';
-        }
-
-        // Load saved preferences on page load
+        // Also search when typing in navbar search
         document.addEventListener('DOMContentLoaded', function () {
-          const savedTheme = localStorage.getItem('theme');
-          if (savedTheme === 'dark') {
-            document.body.classList.add('dark-theme');
-            document.getElementById('themeIcon').className = 'fas fa-sun';
-          }
-
-          const savedLanguage = localStorage.getItem('language');
-          if (savedLanguage === 'ar') {
-            changeLanguage('ar');
+          const navSearchInput = document.getElementById('navSearchInput');
+          if (navSearchInput) {
+            navSearchInput.addEventListener('keyup', function (event) {
+              if (event.key === 'Enter') {
+                searchFromNav();
+              }
+            });
           }
         });
       </script>
-
 </body>
 
 </html>

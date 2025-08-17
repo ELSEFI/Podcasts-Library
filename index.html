@@ -13,57 +13,145 @@
 
 <body>
   <header>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top navbar-fixed">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top navbar-fixed navbar-black">
       <div class="container-fluid">
-        <!-- Logo and Brand -->
+        <!-- Logo and Brand on the left -->
         <a class="navbar-brand" href="index.html">
-          <img src="image/_d1959416-a926-4cf5-ae6e-82a5c2d3802b.jpeg" alt="Logo" width="40" height="40"
+          <img src="image/_d1959416-a926-4cf5-ae6e-82a5c2d3802b.jpeg" alt="Logo" width="45" height="45"
             class="d-inline-block align-text-top">
-          <span style="font-family: fantasy; margin-left: 10px;">Ur Podcasts</span>
+          <span class="brand-text">Ur Podcasts</span>
         </a>
 
-        <!-- Mobile toggle button -->
+        <!-- Mobile hamburger menu button -->
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
 
-        <!-- Navigation items -->
+        <!-- Collapsible navbar content -->
         <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav me-auto">
-            <li class="nav-item">
-              <a href="index.html" class="nav-link">Home</a>
-            </li>
-            <li class="nav-item">
-              <a href="https://www.podcastinsights.com/what-is-a-podcast/" class="nav-link" target="_blank">
-                What Is Podcast?
+          <!-- Main navigation links in the center -->
+          <ul class="navbar-nav mx-auto">
+            <li class="nav-item px-2">
+              <a href="index.html" class="nav-link active" aria-current="page">
+                <i class="fas fa-home me-2"></i>Home
               </a>
             </li>
-            <li class="nav-item">
-              <a href="#wrapper" class="nav-link">Contact with us</a>
+            <li class="nav-item dropdown px-2">
+              <a class="nav-link dropdown-toggle" href="#" id="categoriesDropdown" role="button"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="fas fa-list me-2"></i>Categories
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                <li><a class="dropdown-item" href="Business.html">
+                    <i class="fas fa-briefcase me-2"></i>Business
+                  </a></li>
+                <li><a class="dropdown-item" href="Technical.html">
+                    <i class="fas fa-code me-2"></i>Technical
+                  </a></li>
+                <li><a class="dropdown-item" href="Science.html">
+                    <i class="fas fa-flask me-2"></i>Science
+                  </a></li>
+                <li><a class="dropdown-item" href="Health & Wellness.html">
+                    <i class="fas fa-heart me-2"></i>Health & Wellness
+                  </a></li>
+                <li>
+                  <hr class="dropdown-divider">
+                </li>
+                <li><a class="dropdown-item" href="Art & Entertainment.html">
+                    <i class="fas fa-palette me-2"></i>Art & Entertainment
+                  </a></li>
+                <li><a class="dropdown-item" href="sports.html">
+                    <i class="fas fa-football-ball me-2"></i>Sports
+                  </a></li>
+                <li><a class="dropdown-item" href="Personal.html">
+                    <i class="fas fa-user me-2"></i>Personal
+                  </a></li>
+                <li><a class="dropdown-item" href="Social.html">
+                    <i class="fas fa-users me-2"></i>Social
+                  </a></li>
+                <li><a class="dropdown-item" href="Self-development.html">
+                    <i class="fas fa-chart-line me-2"></i>Self-development
+                  </a></li>
+                <li><a class="dropdown-item" href="News & Media.html">
+                    <i class="fas fa-newspaper me-2"></i>News & Media
+                  </a></li>
+                <li><a class="dropdown-item" href="Education and culture.html">
+                    <i class="fas fa-graduation-cap me-2"></i>Education & Culture
+                  </a></li>
+                <li><a class="dropdown-item" href="General.html">
+                    <i class="fas fa-globe me-2"></i>General
+                  </a></li>
+              </ul>
+            </li>
+            <li class="nav-item px-2">
+              <a href="https://www.podcastinsights.com/what-is-a-podcast/" class="nav-link" target="_blank">
+                <i class="fas fa-info-circle me-2"></i>About Podcasts
+              </a>
+            </li>
+            <li class="nav-item px-2">
+              <a href="#wrapper" class="nav-link">
+                <i class="fas fa-envelope me-2"></i>Contact
+              </a>
             </li>
           </ul>
 
-          <!-- Language and Theme buttons on the right -->
-          <div class="d-flex align-items-center">
+          <!-- Right side controls -->
+          <div class="d-flex align-items-center navbar-controls">
+            <!-- Search toggle button -->
+            <button class="btn btn-outline-light btn-sm me-3" type="button" id="searchToggle"
+              onclick="toggleSearch()" title="Search">
+              <i class="fas fa-search"></i>
+            </button>
+
+            <!-- Language selector -->
             <div class="dropdown me-3">
-              <button class="btn btn-outline-secondary dropdown-toggle" type="button" id="languageDropdown"
-                data-bs-toggle="dropdown" aria-expanded="false">
-                <i class="fas fa-globe"></i> EN
+              <button class="btn btn-outline-light btn-sm" type="button" id="languageDropdown"
+                data-bs-toggle="dropdown" aria-expanded="false" title="Language">
+                <i class="fas fa-globe"></i>
               </button>
-              <ul class="dropdown-menu" aria-labelledby="languageDropdown">
-                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">English</a></li>
-                <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">العربية</a></li>
+              <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="languageDropdown">
+                <li><a class="dropdown-item" href="#" onclick="changeLanguage('en')">
+                    <i class="fas fa-flag-usa me-2"></i>English
+                  </a></li>
+                <li><a class="dropdown-item" href="#" onclick="changeLanguage('ar')">
+                    <i class="fas fa-flag me-2"></i>العربية
+                  </a></li>
               </ul>
             </div>
 
-            <button class="btn btn-outline-secondary" type="button" id="themeToggle" onclick="toggleTheme()">
+            <!-- Theme toggle -->
+            <button class="btn btn-outline-light btn-sm" type="button" id="themeToggle" onclick="toggleTheme()"
+              title="Toggle Theme">
               <i class="fas fa-moon" id="themeIcon"></i>
             </button>
           </div>
         </div>
+
+        <!-- Collapsible search bar (positioned outside navbar-collapse for better mobile UX) -->
+        <div class="collapse w-100" id="searchCollapse">
+          <div class="search-container mt-2">
+            <form class="d-flex" role="search">
+              <input class="form-control search-input" type="search" placeholder="Search podcasts..." aria-label="Search"
+                id="navSearchInput">
+              <button class="btn btn-success ms-2" type="button" onclick="searchFromNav()">
+                <i class="fas fa-search"></i>
+              </button>
+              <button class="btn btn-outline-light ms-1" type="button" onclick="toggleSearch()">
+                <i class="fas fa-times"></i>
+              </button>
+            </form>
+          </div>
+        </div>
       </div>
     </nav>
+  </header>
+  </a>
+  </li>
+  </ul>
+  </div>
+  </div>
+  </nav>
   </header>
 
   <!-- Add padding to body to account for fixed navbar -->
@@ -294,6 +382,36 @@
           }
         }
       }
+
+      // Search from navbar
+      function searchFromNav() {
+        const navSearchInput = document.getElementById('navSearchInput');
+        const mainSearchInput = document.getElementById('searchInput');
+
+        // Copy search term to main search input
+        if (mainSearchInput && navSearchInput) {
+          mainSearchInput.value = navSearchInput.value;
+          searchCategories();
+
+          // Scroll to categories section
+          const categoriesSection = document.getElementById('categoriesContainer');
+          if (categoriesSection) {
+            categoriesSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      }
+
+      // Also search when typing in navbar search
+      document.addEventListener('DOMContentLoaded', function () {
+        const navSearchInput = document.getElementById('navSearchInput');
+        if (navSearchInput) {
+          navSearchInput.addEventListener('keyup', function (event) {
+            if (event.key === 'Enter') {
+              searchFromNav();
+            }
+          });
+        }
+      });
     </script>
 
 </body>
