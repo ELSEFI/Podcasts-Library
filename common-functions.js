@@ -131,11 +131,10 @@ document.addEventListener('DOMContentLoaded', function () {
         document.getElementById('themeIcon').className = 'fas fa-sun';
     }
 
-    // Load saved language
+    // Load saved language - Force English mode to prevent mirroring
     const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage === 'ar') {
-        changeLanguage('ar');
-    }
+    // Force English/LTR mode
+    changeLanguage('en');
 
     // Add enter key support for search
     const searchInput = document.getElementById('navSearchInput');
@@ -335,11 +334,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (themeIcon) themeIcon.className = 'fas fa-sun';
     }
 
-    // Load saved language
+    // Load saved language - Force English mode to prevent mirroring
     const savedLanguage = localStorage.getItem('language');
-    if (savedLanguage === 'ar') {
-        changeLanguage('ar');
-    }
+    // Force English/LTR mode
+    changeLanguage('en');
 
     // Initialize tooltips if Bootstrap is loaded
     if (typeof bootstrap !== 'undefined') {
