@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Podcasts Library</title>
   <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="stylesheet" href="stylees.css">
+  <link rel="stylesheet" href="mastylees.css">
   <link rel="stylesheet" href="navbar-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
@@ -94,7 +94,7 @@
 
   <!-- Categories Section -->
   <section id="categories" class="py-5">
-    <div class="container-fluid px-4">
+    <div class="container">
       <div class="text-center mb-5">
         <h2 class="display-5 fw-bold mb-3">Browse Categories</h2>
         <p class="lead text-muted">Find podcasts by your favorite topics</p>
@@ -115,216 +115,241 @@
 
       <!-- Categories Grid -->
       <div class="row g-4" id="categoriesContainer">
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="sports">
-          <a href="sports.html" class="text-decoration-none">
-            <div class="card h-100 shadow-sm category-item">
-              <div class="category-image-container">
-                <img src="image/st.jpg" class="category-bg-image" alt="Sports">
-                <div class="category-overlay"></div>
-              </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Sports</h5>
-                <p class="card-text category-description">Latest sports news, analysis, and interviews</p>
-                <div class="category-meta">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6">
+          <div class="card h-100 shadow-sm podcast-card-featured">
+            <div class="podcast-image-container position-relative">
+              <img src="image/st.jpg" class="card-img-top" alt="Sports" style="width:100%; object-fit: cover;">
+              <div class="podcast-overlay">
+                <div class="text-center text-white">
+                  <h5 class="fw-bold mb-2">Sports</h5>
+                  <p class="mb-3">Latest sports news, analysis, and interviews</p>
                   <span class="badge bg-primary">25+ Podcasts</span>
                 </div>
               </div>
             </div>
-          </a>
+            <div class="card-body">
+              <h5 class="card-title fw-bold">Sports</h5>
+              <a href="sports.html" class="btn btn-primary btn-sm">
+                <i class="fas fa-arrow-right me-1"></i>Explore
+              </a>
+            </div>
+          </div>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="art entertainment">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="art entertainment">
           <a href="Art & Entertainment.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
-                <img src="image/art.jpg" class="category-bg-image" alt="Art & Entertainment">
+                <img src="image/art.jpg" class="category-bg-image" alt="Art & Entertainment" style="width:100%">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Art & Entertainment</h5>
-                <p class="card-text category-description">Movies, music, books, and creative content</p>
-                <div class="category-meta">
-                  <span class="badge bg-success">30+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Art & Entertainment</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Movies, music, books, and creative content</p>
+                  <div class="category-meta">
+                    <span class="badge bg-success">30+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="technical">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="technical">
           <a href="Technical.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/tech.jpg" class="category-bg-image" alt="Technical">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Technical</h5>
-                <p class="card-text category-description">Programming, AI, cybersecurity, and tech trends</p>
-                <div class="category-meta">
-                  <span class="badge bg-info">40+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Technical</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Programming, AI, cybersecurity, and tech trends</p>
+                  <div class="category-meta">
+                    <span class="badge bg-info">40+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="business">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="business">
           <a href="Business.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/bu.jpg" class="category-bg-image" alt="Business">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Business</h5>
-                <p class="card-text category-description">Entrepreneurship, leadership, and market insights</p>
-                <div class="category-meta">
-                  <span class="badge bg-warning text-dark">35+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Business</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Entrepreneurship, leadership, and market insights</p>
+                  <div class="category-meta">
+                    <span class="badge bg-warning text-dark">35+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="science">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="science">
           <a href="Science.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/sci.jpg" class="category-bg-image" alt="Science">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Science</h5>
-                <p class="card-text category-description">Research, discoveries, and scientific discussions</p>
-                <div class="category-meta">
-                  <span class="badge bg-danger">20+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Science</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Research, discoveries, and scientific discussions</p>
+                  <div class="category-meta">
+                    <span class="badge bg-danger">20+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="health wellness">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="health wellness">
           <a href="Health & Wellness.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/health.jpg" class="category-bg-image" alt="Health & Wellness">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Health & Wellness</h5>
-                <p class="card-text category-description">Fitness, nutrition, mental health, and wellbeing</p>
-                <div class="category-meta">
-                  <span class="badge bg-success">28+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Health & Wellness</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Fitness, nutrition, mental health, and wellbeing</p>
+                  <div class="category-meta">
+                    <span class="badge bg-success">28+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="self development">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="self development">
           <a href="Self-development.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/self.jpg" class="category-bg-image" alt="Self-Development">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Self-Development</h5>
-                <p class="card-text category-description">Personal growth, productivity, and life skills</p>
-                <div class="category-meta">
-                  <span class="badge bg-primary">22+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Self-Development</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Personal growth, productivity, and life skills</p>
+                  <div class="category-meta">
+                    <span class="badge bg-primary">22+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="personal">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="personal">
           <a href="Personal.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/personal.jpg" class="category-bg-image" alt="Personal">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Personal</h5>
-                <p class="card-text category-description">Life stories, experiences, and personal journeys</p>
-                <div class="category-meta">
-                  <span class="badge bg-secondary">18+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Personal</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Life stories, experiences, and personal journeys</p>
+                  <div class="category-meta">
+                    <span class="badge bg-secondary">18+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="social">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="social">
           <a href="Social.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/so.jpg" class="category-bg-image" alt="Social">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Social</h5>
-                <p class="card-text category-description">Society, culture, and social issues discussions</p>
-                <div class="category-meta">
-                  <span class="badge bg-info">26+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Social</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Society, culture, and social issues discussions</p>
+                  <div class="category-meta">
+                    <span class="badge bg-info">26+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="news media">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="news media">
           <a href="News & Media.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/med.jpg" class="category-bg-image" alt="News & Media">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">News & Media</h5>
-                <p class="card-text category-description">Current events, journalism, and media analysis</p>
-                <div class="category-meta">
-                  <span class="badge bg-dark">32+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">News & Media</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Current events, journalism, and media analysis</p>
+                  <div class="category-meta">
+                    <span class="badge bg-dark">32+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="education culture">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="education culture">
           <a href="Education and culture.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/edu.jpg" class="category-bg-image" alt="Education & Culture">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Education & Culture</h5>
-                <p class="card-text category-description">Learning, history, and cultural exploration</p>
-                <div class="category-meta">
-                  <span class="badge bg-success">24+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">Education & Culture</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Learning, history, and cultural exploration</p>
+                  <div class="category-meta">
+                    <span class="badge bg-success">24+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
           </a>
         </div>
 
-        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="general">
+        <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="general">
           <a href="General.html" class="text-decoration-none">
             <div class="card h-100 shadow-sm category-item">
               <div class="category-image-container">
                 <img src="image/gen.jpg" class="category-bg-image" alt="General">
                 <div class="category-overlay"></div>
               </div>
-              <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">General</h5>
-                <p class="card-text category-description">Diverse topics and general interest content</p>
-                <div class="category-meta">
-                  <span class="badge bg-primary">15+ Podcasts</span>
+              <div class="card-body">
+                <h5 class="card-title">General</h5>
+                <div class="category-details">
+                  <p class="card-text category-description">Diverse topics and general interest content</p>
+                  <div class="category-meta">
+                    <span class="badge bg-primary">15+ Podcasts</span>
+                  </div>
                 </div>
               </div>
             </div>
@@ -605,7 +630,7 @@
   </section>
 
   <!-- Newsletter Section -->
-  <section class="newsletter-section py-5">
+  <!-- <section class="newsletter-section py-5">
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-lg-8">
@@ -618,38 +643,7 @@
         </div>
       </div>
     </div>
-  </section>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  </section> -->
 
 
 

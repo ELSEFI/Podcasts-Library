@@ -8,7 +8,10 @@ body {
   height: 100%;
   padding: 0px;
   margin: 0px;
-  background-color: rgb(50, 48, 48);
+  background-color: #1a1a1a;
+  /* Dark background for all pages */
+  color: #ffffff;
+  /* White text by default */
 }
 
 .sign {
@@ -612,6 +615,8 @@ li a:hover {
   background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 50%, #1a1a1a 100%);
   position: relative;
   overflow: hidden;
+  padding: 4rem 0;
+  /* Increase padding for full width */
 }
 
 #categories::before {
@@ -627,9 +632,40 @@ li a:hover {
   pointer-events: none;
 }
 
-#categories .container {
+/* Categories Container - Full Width Optimized */
+.categories-container {
+  padding: 0 !important;
+  /* Remove default container padding */
+  max-width: 100% !important;
+  /* Ensure full width */
+}
+
+.categories-container .row {
+  --bs-gutter-x: 4rem;
+  /* Much larger horizontal spacing between cards */
+  --bs-gutter-y: 6rem;
+  /* Much larger vertical spacing between rows */
+  margin: 0;
+  /* Remove negative margins */
+}
+
+.category-card {
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  margin-bottom: 5rem;
+  /* Much larger margin for more space between rows */
+  display: flex;
+  justify-content: center;
+  /* Center the square cards */
+  align-items: center;
+}
+
+#categories .container-fluid {
   position: relative;
   z-index: 2;
+  max-width: 100%;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 #categories h2 {
@@ -643,29 +679,80 @@ li a:hover {
 
 /* Category Cards */
 .category-card {
-  transition: transform 0.3s ease;
+  transition: transform 0.4s ease;
+  margin-bottom: 2rem;
+  /* Optimized spacing for full width */
 }
 
 .category-card:hover {
-  transform: translateY(-10px);
+  transform: translateY(-8px);
 }
 
 .category-item {
   border: none;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  border-radius: 25px;
-  background: linear-gradient(145deg,
-      rgba(255, 255, 255, 0.1),
-      rgba(255, 255, 255, 0.05));
-  backdrop-filter: blur(20px);
-  -webkit-backdrop-filter: blur(20px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow:
-    0 20px 40px rgba(0, 0, 0, 0.3),
-    0 8px 32px rgba(0, 0, 0, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  background: transparent !important;
+  background-color: transparent !important;
   position: relative;
   overflow: hidden;
+  height: 240px;
+  width: 240px;
+  /* Make cards square */
+  aspect-ratio: 1;
+  /* Ensure perfect square */
+  margin: 15px;
+  /* Add spacing on all sides */
+  /* Reduced height to allow more vertical spacing */
+  box-shadow:
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+.category-image-container {
+  position: absolute !important;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 0;
+  overflow: hidden;
+  border-radius: 20px;
+  width: 100%;
+  height: 100%;
+}
+
+.category-bg-image {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  object-position: center center !important;
+  border-radius: 20px;
+  transition: transform 0.4s ease;
+  display: block !important;
+  z-index: 0;
+  max-width: none !important;
+  max-height: none !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+}
+
+.category-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.05) 50%,
+      rgba(0, 0, 0, 0.2) 100%);
+  border-radius: 20px;
+  transition: all 0.4s ease;
+  z-index: 1;
 }
 
 .category-item::before {
@@ -680,70 +767,103 @@ li a:hover {
       rgba(255, 193, 7, 0.1));
   opacity: 0;
   transition: opacity 0.4s ease;
-  z-index: 1;
+  z-index: 2;
+  border-radius: 20px;
 }
 
 .category-item:hover {
-  transform: translateY(-15px) scale(1.05);
+  transform: translateY(-12px) scale(1.02);
   box-shadow:
-    0 30px 60px rgba(0, 0, 0, 0.4),
-    0 15px 40px rgba(0, 0, 0, 0.3),
-    0 0 30px rgba(0, 123, 255, 0.2),
-    inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(0, 123, 255, 0.3);
+    0 25px 50px rgba(0, 0, 0, 0.4),
+    0 15px 35px rgba(0, 0, 0, 0.3),
+    0 0 25px rgba(0, 123, 255, 0.2);
 }
 
 .category-item:hover::before {
   opacity: 1;
 }
 
+.category-item:hover .category-bg-image {
+  transform: scale(1.05);
+}
+
+.category-item:hover .category-overlay {
+  background: linear-gradient(135deg,
+      rgba(0, 0, 0, 0.05) 0%,
+      rgba(0, 0, 0, 0.02) 50%,
+      rgba(0, 0, 0, 0.1) 100%);
+}
+
 .category-item .card-body {
   position: relative;
-  z-index: 2;
-  padding: 2.5rem 2rem;
+  z-index: 3;
+  padding: 1.5rem 1rem;
+  /* Reduced padding for better fit */
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: transparent !important;
+  background-color: transparent !important;
 }
 
 .category-item .card-title {
   color: #ffffff;
-  font-size: 1.4rem;
+  font-size: 1.3rem;
+  /* Smaller title for full width */
   font-weight: 700;
-  margin-bottom: 1rem;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 0.6rem;
+  text-shadow: 3px 3px 8px rgba(0, 0, 0, 1), 1px 1px 4px rgba(0, 0, 0, 0.8);
   transition: all 0.3s ease;
 }
 
-.category-item .card-text {
-  color: #c8c8c8;
-  font-size: 0.95rem;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+.category-item .category-description {
+  color: #ffffff;
+  font-size: 0.8rem;
+  /* Smaller description for full width */
+  line-height: 1.4;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 1), 1px 1px 3px rgba(0, 0, 0, 0.8);
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s ease;
+}
+
+.category-item:hover .category-description {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .category-item:hover .card-title {
   color: #ffffff;
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+  text-shadow: 0 0 12px rgba(0, 123, 255, 0.8);
+  transform: translateY(-5px);
 }
 
 .category-icon {
   transition: all 0.4s ease;
   background: linear-gradient(135deg,
-      rgba(0, 123, 255, 0.8),
-      rgba(0, 86, 179, 0.9));
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.08));
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   border-radius: 50%;
-  width: 90px;
-  height: 90px;
+  width: 80px;
+  height: 80px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto 1.5rem;
+  margin: 0 auto 1rem;
   box-shadow:
-    0 12px 30px rgba(0, 123, 255, 0.4),
-    0 4px 15px rgba(0, 0, 0, 0.3),
+    0 10px 25px rgba(0, 0, 0, 0.3),
+    0 4px 15px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
   color: white;
   position: relative;
   overflow: hidden;
-  border: 2px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .category-icon::before {
@@ -754,20 +874,21 @@ li a:hover {
   right: 0;
   bottom: 0;
   background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.3),
-      transparent 70%);
+      rgba(0, 123, 255, 0.2),
+      rgba(255, 193, 7, 0.2));
   opacity: 0;
   transition: opacity 0.3s ease;
+  border-radius: 50%;
 }
 
 .category-item:hover .category-icon {
-  transform: scale(1.2) rotateY(15deg);
+  transform: scale(1.1) rotateY(15deg);
   box-shadow:
-    0 20px 50px rgba(0, 123, 255, 0.6),
-    0 8px 25px rgba(0, 0, 0, 0.4),
-    0 0 20px rgba(0, 123, 255, 0.4),
+    0 15px 35px rgba(0, 123, 255, 0.3),
+    0 8px 20px rgba(0, 0, 0, 0.4),
+    0 0 20px rgba(255, 255, 255, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  border: 2px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.25);
 }
 
 .category-item:hover .category-icon::before {
@@ -775,37 +896,232 @@ li a:hover {
 }
 
 .category-icon i {
-  font-size: 2.2rem;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+  z-index: 2;
+  position: relative;
+}
+
+.category-meta {
+  margin-top: auto;
+  opacity: 0;
+  transform: translateY(15px);
+  transition: all 0.3s ease 0.1s;
+}
+
+.category-item:hover .category-meta {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .category-meta .badge {
   background: linear-gradient(135deg,
-      rgba(0, 123, 255, 0.8),
-      rgba(0, 86, 179, 0.9)) !important;
+      rgba(255, 255, 255, 0.15),
+      rgba(255, 255, 255, 0.08)) !important;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
   color: white !important;
   padding: 8px 16px;
   border-radius: 20px;
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   font-weight: 600;
   box-shadow:
-    0 4px 15px rgba(0, 123, 255, 0.3),
+    0 6px 15px rgba(0, 0, 0, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.2);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
   transition: all 0.3s ease;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
 }
 
 .category-item:hover .category-meta .badge {
   transform: scale(1.05);
   box-shadow:
-    0 6px 20px rgba(0, 123, 255, 0.4),
-    0 0 15px rgba(0, 123, 255, 0.3),
+    0 8px 20px rgba(0, 123, 255, 0.3),
+    0 0 15px rgba(255, 255, 255, 0.2),
     inset 0 1px 0 rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
-.category-item:hover .card-title {
-  color: #ffffff;
-  text-shadow: 0 0 10px rgba(0, 123, 255, 0.5);
+/* Responsive adjustments for full-width category cards */
+@media (min-width: 1400px) {
+
+  /* XXL screens - 6 columns */
+  .categories-container .row {
+    --bs-gutter-x: 3.5rem;
+    /* Much larger horizontal space for large screens */
+    --bs-gutter-y: 6rem;
+    /* Large vertical spacing */
+  }
+
+  .category-item {
+    height: 260px;
+    /* Reduced height */
+  }
+
+  .category-item .card-title {
+    font-size: 1.3rem;
+    /* Slightly smaller text */
+  }
+
+  .category-item .category-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1399px) and (min-width: 1200px) {
+
+  /* XL screens - 4 columns */
+  .categories-container .row {
+    --bs-gutter-x: 4rem;
+    /* Much larger horizontal spacing */
+    --bs-gutter-y: 5.5rem;
+    /* Large vertical spacing */
+  }
+
+  .category-item {
+    height: 250px;
+    width: 250px;
+    /* Keep square */
+    aspect-ratio: 1;
+    margin: 12px;
+    /* Reduced height */
+  }
+
+  .category-item .card-title {
+    font-size: 1.25rem;
+    /* Smaller text */
+  }
+}
+
+@media (max-width: 1199px) and (min-width: 992px) {
+
+  /* LG screens - 3 columns */
+  .categories-container .row {
+    --bs-gutter-x: 5rem;
+    /* Maximum horizontal space for 3 columns */
+    --bs-gutter-y: 5rem;
+    /* Large vertical spacing */
+  }
+
+  .category-item {
+    height: 240px;
+    width: 240px;
+    /* Keep square */
+    aspect-ratio: 1;
+    margin: 12px;
+    /* Reduced height */
+  }
+
+  .category-item .card-body {
+    padding: 1.4rem 1rem;
+    /* Reduced padding */
+  }
+
+  .category-item .card-title {
+    font-size: 1.2rem;
+    /* Smaller text */
+  }
+}
+
+@media (max-width: 991px) and (min-width: 768px) {
+
+  /* MD screens - 2 columns */
+  .categories-container .row {
+    --bs-gutter-x: 6rem;
+    /* Maximum horizontal space for 2 columns */
+  }
+
+  .category-card {
+    margin-bottom: 4rem;
+    /* Much larger spacing */
+  }
+
+  .category-item {
+    height: 220px;
+    width: 220px;
+    /* Keep square */
+    aspect-ratio: 1;
+    margin: 10px;
+    /* Smaller margins on smaller screens */
+    /* Smaller cards */
+  }
+
+  .category-item .card-title {
+    font-size: 1.25rem;
+  }
+
+  .category-item .category-description {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 767px) and (min-width: 576px) {
+
+  /* SM screens - 2 columns */
+  .categories-container .row {
+    --bs-gutter-x: 4rem;
+    /* Large horizontal space for smaller screens */
+  }
+
+  .category-card {
+    margin-bottom: 3.5rem;
+    /* Larger spacing */
+  }
+
+  .category-item {
+    height: 210px;
+    width: 210px;
+    /* Keep square */
+    aspect-ratio: 1;
+    margin: 8px;
+    /* Smaller margins */
+    /* Smaller cards */
+  }
+
+  .category-item .card-title {
+    font-size: 1.2rem;
+  }
+
+  .category-item .category-description {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 575px) {
+
+  /* XS screens - 1 column */
+  .categories-container .row {
+    --bs-gutter-x: 1.5rem;
+    /* Standard space for single column */
+  }
+
+  .category-item {
+    height: 240px;
+  }
+
+  .category-item .card-body {
+    padding: 1rem;
+  }
+
+  .category-item .card-title {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .category-item .category-description {
+    font-size: 0.8rem;
+    margin-bottom: 1rem;
+  }
+
+  .category-icon {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 0.8rem;
+  }
+
+  .category-icon i {
+    font-size: 1.5rem;
+  }
 }
 
 #categories .form-control {
