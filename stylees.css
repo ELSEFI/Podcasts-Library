@@ -1156,6 +1156,70 @@ li a:hover {
   box-shadow: 0 8px 25px rgba(0, 123, 255, 0.4);
 }
 
+/* Section 5 - Features */
+.features-section {
+  background: var(--dark-bg);
+  color: white;
+}
+
+.feature-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  padding: 2rem;
+  height: 100%;
+  transition: all 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+.feature-icon {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.feature-icon.text-primary {
+  color: #007bff !important;
+}
+
+.feature-icon.text-success {
+  color: #28a745 !important;
+}
+
+.feature-icon.text-warning {
+  color: #ffc107 !important;
+}
+
+.feature-icon.text-info {
+  color: #17a2b8 !important;
+}
+
+.feature-icon.text-danger {
+  color: #dc3545 !important;
+}
+
+.feature-icon.text-secondary {
+  color: #6c757d !important;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.feature-card .card-text {
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+}
+
 /* Newsletter Section */
 .newsletter-section {
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
