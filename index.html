@@ -1097,20 +1097,20 @@
         // Set initial state
         modernSelect.value = '';
         updateLabelState(modernSelect);
-        
+
         modernSelect.addEventListener('change', function () {
           updateLabelState(this);
         });
-        
+
         // Also handle focus/blur for select
-        modernSelect.addEventListener('focus', function() {
+        modernSelect.addEventListener('focus', function () {
           const label = this.nextElementSibling;
           label.style.transform = 'translateY(-35px) scale(0.85)';
           label.style.color = '#007bff';
           label.style.fontWeight = '600';
         });
-        
-        modernSelect.addEventListener('blur', function() {
+
+        modernSelect.addEventListener('blur', function () {
           updateLabelState(this);
         });
       }
@@ -1161,7 +1161,7 @@
               label.style.color = 'rgba(255, 255, 255, 0.7)';
               label.style.fontWeight = 'normal';
             });
-            
+
             // Specifically reset select element
             if (modernSelect) {
               modernSelect.value = '';

@@ -432,7 +432,7 @@
 }
 
 /* Force select with empty value to keep label in place */
-.modern-select[value=""] + .modern-label:not(:focus) {
+.modern-select[value=""]+.modern-label:not(:focus) {
     transform: translateY(-50%) scale(1) !important;
     color: rgba(255, 255, 255, 0.7) !important;
     font-weight: normal !important;
