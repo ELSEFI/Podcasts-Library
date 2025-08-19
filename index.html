@@ -1,203 +1,1377 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="ltr">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Main</title>
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="mastylees.css">
-  <nav class="headeer navbar navbar-expand-lg bg-body-tertiary">
-
-
-  <li><a href="Main.html"><h1 style="font-family: fantasy;"><img src="image/_d1959416-a926-4cf5-ae6e-82a5c2d3802b.jpeg"> Ur Podcasts</h1></a></li>
-  <li><a href="Main.html">Home</a></li>
-  <li><a href="https://www.podcastinsights.com/what-is-a-podcast/">What Is Podcast?</a></li>
-  <li><a href="#wrapper">Contact with us</a></li>
-<div class="sign">
-<li><a href="sign in.html">sign in</a></li>
-</div>
-</nav>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Podcasts Library</title>
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="stylees.css">
+  <link rel="stylesheet" href="navbar-styles.css">
+  <link rel="stylesheet" href="sections-style.css">
+  <link rel="stylesheet" href="css/language-styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="navbar-loader.js"></script>
+  <!-- Translation System -->
+  <script src="js/translation-system.js"></script>
 </head>
+
 <body>
-<div>
+  <!-- Navbar will be loaded here by navbar-loader.js -->
+  <div id="navbar-container"></div>
 
-<div class="start"><img src="image/side-view-radio-microphone-with-copy-space.jpg" alt=""></div>
-
-
-
-</div>
-
-    <hr>
-    <br><br>
-    <div class="InputContainer">
-      <input placeholder="Search For Podcast.." id="input" class="input" name="text" type="text">
+  <!-- Hero Section -->
+  <section class="hero-section position-relative d-flex align-items-center" style="background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.4)), url('image/side-view-radio-microphone-with-copy-space.jpg'); 
+           background-size: cover; 
+           background-position: center; 
+           background-attachment: fixed; 
+           min-height: 100vh;">
+    <div class="container">
+      <div class="row align-items-center text-white">
+        <div class="col-lg-8 col-md-10 mx-auto text-center">
+          <h1 class="display-2 fw-bold mb-4 text-shadow" data-aos="fade-up" data-translate="heroTitle">
+            اكتشف<br>مذهلة<br>البودكاست
+          </h1>
+          <p class="lead mb-5 fs-4 text-shadow" data-aos="fade-up" data-aos-delay="200"
+            data-translate="heroDescription">
+            وجهتك النهائية لأفضل البودكاست في جميع الفئات. من التكنولوجيا إلى الترفيه، نحن نغطي كل شيء.
+          </p>
+          <div class="d-flex gap-3 mb-5 justify-content-center flex-wrap" data-aos="fade-up" data-aos-delay="400">
+            <a href="#categories" class="btn btn-light btn-lg rounded-pill px-5 py-3 shadow">
+              <i class="fas fa-play me-2"></i><span data-translate="exploreNow">استكشف الفئات</span>
+            </a>
+            <a href="#top-rated" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">
+              <i class="fas fa-star me-2"></i><span data-translate="topRated">الأعلى تقييماً</span>
+            </a>
+          </div>
+        </div>
       </div>
-<br><br><br>
-<h1 class="headd"><b>Categories</b></h1>
-<div class="bod">
-<div class="tittle allformat"><span><a href="sports.html"><b>Sports</b></a></span></div>
-<div class="tittle allformata"><a href="Art & Entertainment.html"><b>Art & Entertainment</b></a></div>
-<div class="tittle allformatp"><a href="Personal.html"><b>Personal</b></a></div>
-<div class="tittle allformatt"><a href="Technical.html"><b>Technical</b></a></div>
-<div class="tittle allformats"><a href="Science.html"><b>Science</b></a></div>
-<div class="tittle allformatsd"><a href="Self-development.html"><b>Self-development</b></a></div>
-<div class="tittle allformatbu"><a href="Business.html"><b>Business</b></a></div>
-<div class="tittle allformatso"><a href="Social.html"><b>Social</b></a></div>
-<div class="tittle allformath"><a href="Health & Wellness.html"><b>Health & Wellness</b></a></div>
-<div class="tittle allformatn"><a href="News & Media.html"><b>News & Media</b></a></div>
-<div class="tittle allformatedu"><a href="Education and culture.html"><b>Education and culture</b></a></div>
-<div class="tittle allformatge"><a href="General.html"><b>General</b></a></div>
-</div>
-<br><br>
-<div class="topp">
-<h1 class="tr"><b>Top Rated</b></h1>
-<br><br><br>
-<div class="col1">
-<div class="ratt"><img src="image/fengan.jpg"><a href="https://podcasts.apple.com/us/podcast/%D9%81%D9%86%D8%AC%D8%A7%D9%86-%D9%85%D8%B9-%D8%B9%D8%A8%D8%AF%D8%A7%D9%84%D8%B1%D8%AD%D9%85%D9%86-%D8%A3%D8%A8%D9%88%D9%85%D8%A7%D9%84%D8%AD/id985515827"> <h5>فنجان</h5></a> </div>
-<div class="ratt"><img src="image/ابجوره.jpg"> <a href="https://podcasts.apple.com/sa/podcast/%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA-%D8%A3%D8%A8%D8%AC%D9%88%D8%B1%D8%A9/id1272687671" ><h5>أبجوره</h5></a> </div>
-<div class="ratt"><img src="image/swalef.jpg"><a href="https://podcasts.apple.com/us/podcast/%D8%B3%D9%88%D8%A7%D9%84%D9%81-%D8%A8%D8%B2%D9%86%D8%B3-%D9%85%D8%B9-%D9%85%D8%B4%D9%87%D9%88%D8%B1-%D8%A7%D9%84%D8%AF%D8%A8%D9%8A%D8%A7%D9%86/id1239234534"> <h5> سوالف بزنس</h5></a> </div>
-</div><br>
 
-<div class="col2">
-<div class="ratt"><img src="image/roqia.jpg"><a href="https://podcasts.apple.com/us/podcast/alroya-podcasts-%D8%A7%D9%84%D8%B1%D8%A4%D9%8A%D8%A9-%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA/id1495651008"> <h5>الرؤية</h5></a> </div>
-<div class="ratt"><img src="image/ashiaa.jpg"><a href="https://podcasts.apple.com/us/podcast/%D8%A3%D8%B4%D9%8A%D8%A7%D8%A1-%D8%BA%D9%8A%D8%B1%D8%AA%D9%86%D8%A7/id1480610796"> <h5> أشياء غيرتنا</h5></a> </div>
-<div class="ratt"><img src="image/socrat.jpg"><a href="https://podcasts.apple.com/us/podcast/%D8%B3%D9%82%D8%B1%D8%A7%D8%B7-%D9%85%D8%B9-%D8%B9%D9%85%D8%B1-%D8%A7%D9%84%D8%AC%D8%B1%D9%8A%D8%B3%D9%8A/id1459232606"> <h5> سقراط</h5></a> </div>
-</div><br>
-
-<div class="col3">
-<div class="ratt"><img src="image/jazira.jpg"><a href="https://podcasts.apple.com/us/podcast/%D9%85%D8%AC%D9%84%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9-al-jazeera-journalism-review/id1554853121"> <h5> الجزيرة</h5></a> </div>
-<div class="ratt"><img src="image/qahwa.jpeg"><a href="https://podcasts.apple.com/us/podcast/%D9%82%D9%87%D9%88%D8%A9-%D9%88%D8%AE%D8%A8%D8%B1%D9%8A%D8%A9-%D9%85%D8%B9-%D9%85%D8%A7%D9%8A%D8%A7-%D8%AD%D8%AC%D9%8A%D8%AC/id1534708077"> <h5> قهوة وخبرية</h5></a> </div>
-<div class="ratt"><img src="image/mostagad.jpg"><a href="https://podcasts.apple.com/us/podcast/almostajad-%D8%A7%D9%84%D9%85-%D8%B3%D8%AA%D8%AC-%D8%AF/id1503146469"> <h5> المستجد</h5></a> </div>
-</div>
-
-
-
-
-
-
-
-
-</div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<hr>
-<footer>
-<ul class="wrapper" id="wrapper">
-  <li class="icon facebook">
-    <span class="tooltip">Facebook</span>
-    <svg
-      viewBox="0 0 320 512"
-      height="1.2em"
-      fill="currentColor"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-      ></path>
-    </svg>
-  </li>
-  <li class="icon twitter">
-    <span class="tooltip">Twitter</span>
-    <svg
-      height="1.8em"
-      fill="currentColor"
-      viewBox="0 0 48 48"
-      xmlns="http://www.w3.org/2000/svg"
-      class="twitter"
-    >
-      <path
-        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
-      ></path>
-    </svg>
-  </li>
-  <li class="icon instagram">
-    <span class="tooltip">Instagram</span>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      height="1.2em"
-      fill="currentColor"
-      class="bi bi-instagram"
-      viewBox="0 0 16 16"
-    >
-      <path
-        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
-      ></path>
-    </svg>
-  </li>
-</ul>
-
-
-<section class="">
-  <!-- Footer -->
-  <footer class="text-center text-white" style="background-color: #0a4275;">
-    <!-- Grid container -->
-    <div class="container p-4 pb-0">
-      <!-- Section: CTA -->
-      <section class="">
-        <p class="d-flex justify-content-center align-items-center">
-          <span class="me-3">Register for free</span>
-<a href="sign up.html"><button data-mdb-ripple-init type="button" class="btn btn-outline-light btn-rounded">
-  Sign up! </a>
-          </button>
-        </p>
-      </section>
-      <!-- Section: CTA -->
+      <!-- Stats Row -->
+      <div class="row mt-5 text-center" data-aos="fade-up" data-aos-delay="600">
+        <div class="col-md-4 mb-4">
+          <div class="stat-card">
+            <div class="stat-card-inner">
+              <div class="stat-icon">
+                <i class="fas fa-th-large"></i>
+              </div>
+              <h3 class="fw-bold display-4 counter" data-target="12" style="color: white !important;">12+</h3>
+              <p class="mb-0 stat-label" style="color: white !important;" data-translate="categoriesCount">الفئات</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="stat-card">
+            <div class="stat-card-inner">
+              <div class="stat-icon">
+                <i class="fas fa-podcast"></i>
+              </div>
+              <h3 class="fw-bold display-4 counter" data-target="500" style="color: white !important;">500+</h3>
+              <p class="mb-0 stat-label" style="color: white !important;" data-translate="podcastsCount">البودكاست</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="stat-card">
+            <div class="stat-card-inner">
+              <div class="stat-icon">
+                <i class="fas fa-users"></i>
+              </div>
+              <h3 class="fw-bold display-4 counter" data-target="100" style="color: white !important;">100k+</h3>
+              <p class="mb-0 stat-label" style="color: white !important;" data-translate="listeners">المستمعين</p>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Grid container -->
 
-    <!-- Copyright -->
-    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-      © 2020 Copyright:
-      <a class="text-white" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+    <!-- Scroll indicator -->
+    <div class="position-absolute bottom-0 start-50 translate-middle-x mb-4" data-aos="fade-up" data-aos-delay="800">
+      <a href="#categories" class="text-white text-decoration-none">
+        <i class="fas fa-chevron-down fa-2x animate-bounce"></i>
+      </a>
     </div>
-    <!-- Copyright -->
+  </section>
+
+  <!-- Categories Section -->
+  <section id="categories" class="py-5 dark-section">
+    <div class="container-fluid px-4">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3 text-white" data-translate="browseCategoriesTitle">تصفح الفئات</h2>
+        <p class="lead text-light" data-translate="browseCategoriesSubtitle">ابحث عن البودكاست حسب مواضيعك المفضلة</p>
+
+        <!-- Search Bar -->
+        <div class="row justify-content-center mt-4">
+          <div class="col-lg-6">
+            <div class="input-group input-group-lg">
+              <input type="text" class="form-control rounded-pill" placeholder="البحث عن البودكاست..." id="searchInput"
+                data-translate-placeholder="searchPlaceholder" onkeyup="searchCategories()">
+              <button class="btn btn-primary rounded-pill ms-2" type="button">
+                <i class="fas fa-search"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Categories Grid -->
+      <div class="row g-4" id="categoriesContainer">
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="sports">
+          <a href="sports.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/st.jpg" class="category-bg-image" alt="Sports">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="sports">Sports</h5>
+                <p class="card-text category-description" data-translate="sportsDesc">Latest sports news, analysis, and
+                  interviews</p>
+                <div class="category-meta">
+                  <span class="badge bg-primary">25+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="art entertainment">
+          <a href="Art & Entertainment.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/art.jpg" class="category-bg-image" alt="Art & Entertainment">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="art">Art & Entertainment</h5>
+                <p class="card-text category-description" data-translate="artEntertainmentDesc">Movies, music, books,
+                  and creative content</p>
+                <div class="category-meta">
+                  <span class="badge bg-success">30+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="technical">
+          <a href="Technical.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/tech.jpg" class="category-bg-image" alt="Technical">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="technical">Technical</h5>
+                <p class="card-text category-description" data-translate="technicalDesc">Programming, AI, cybersecurity,
+                  and tech trends</p>
+                <div class="category-meta">
+                  <span class="badge bg-info">40+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="business">
+          <a href="Business.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/bu.jpg" class="category-bg-image" alt="Business">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="business">Business</h5>
+                <p class="card-text category-description" data-translate="businessDesc">Entrepreneurship, leadership,
+                  and market insights</p>
+                <div class="category-meta">
+                  <span class="badge bg-warning text-dark">35+ <span
+                      data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="science">
+          <a href="Science.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/sci.jpg" class="category-bg-image" alt="Science">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="science">Science</h5>
+                <p class="card-text category-description" data-translate="scienceDesc">Research, discoveries, and
+                  scientific discussions</p>
+                <div class="category-meta">
+                  <span class="badge bg-danger">20+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="health wellness">
+          <a href="Health & Wellness.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/health.jpg" class="category-bg-image" alt="Health & Wellness">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="health">Health & Wellness</h5>
+                <p class="card-text category-description" data-translate="healthWellnessDesc">Fitness, nutrition, mental
+                  health, and wellbeing</p>
+                <div class="category-meta">
+                  <span class="badge bg-success">28+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="self development">
+          <a href="Self-development.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/self.jpg" class="category-bg-image" alt="Self-Development">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="selfDevelopment">Self-Development</h5>
+                <p class="card-text category-description" data-translate="selfDevelopmentDesc">Personal growth,
+                  productivity, and life skills</p>
+                <div class="category-meta">
+                  <span class="badge bg-primary">22+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="personal">
+          <a href="Personal.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/personal.jpg" class="category-bg-image" alt="Personal">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="personal">Personal</h5>
+                <p class="card-text category-description" data-translate="personalDesc">Life stories, experiences, and
+                  personal journeys</p>
+                <div class="category-meta">
+                  <span class="badge bg-secondary">18+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="social">
+          <a href="Social.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/so.jpg" class="category-bg-image" alt="Social">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="social">Social</h5>
+                <p class="card-text category-description" data-translate="socialDesc">Society, culture, and social
+                  issues discussions</p>
+                <div class="category-meta">
+                  <span class="badge bg-info">26+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="news media">
+          <a href="News & Media.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/med.jpg" class="category-bg-image" alt="News & Media">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="news">News & Media</h5>
+                <p class="card-text category-description" data-translate="newsMediaDesc">Current events, journalism, and
+                  media analysis</p>
+                <div class="category-meta">
+                  <span class="badge bg-dark">32+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="education culture">
+          <a href="Education and culture.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/edu.jpg" class="category-bg-image" alt="Education & Culture">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="education">Education & Culture</h5>
+                <p class="card-text category-description" data-translate="educationCultureDesc">Learning, history, and
+                  cultural exploration</p>
+                <div class="category-meta">
+                  <span class="badge bg-success">24+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="col-xxl-2 col-xl-3 col-lg-4 col-md-6 col-sm-6 category-card" data-category="general">
+          <a href="General.html" class="text-decoration-none">
+            <div class="card h-100 shadow-sm category-item">
+              <div class="category-image-container">
+                <img src="image/gen.jpg" class="category-bg-image" alt="General">
+                <div class="category-overlay"></div>
+              </div>
+              <div class="card-body text-center p-4">
+                <h5 class="card-title fw-bold" data-translate="general">General</h5>
+                <p class="card-text category-description" data-translate="generalDesc">Diverse topics and general
+                  interest content</p>
+                <div class="category-meta">
+                  <span class="badge bg-primary">15+ <span data-translate="podcastsText">Podcasts</span></span>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Features Section -->
+  <section id="features" class="py-5 features-section dark-section">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="display-5 fw-bold mb-3 text-white" data-translate="whyChoose">Why Choose Our Platform</h2>
+        <p class="lead text-light" data-translate="whyChooseSubtitle">Discover what makes our podcast platform unique
+          and powerful</p>
+      </div>
+
+      <div class="row g-4">
+        <!-- Feature 1 -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon">
+              <i class="fas fa-search text-primary"></i>
+            </div>
+            <h4 class="feature-title" data-translate="smartDiscovery">Smart Discovery</h4>
+            <p class="feature-description" data-translate="smartDesc">Advanced AI-powered recommendations help you
+              discover podcasts tailored to
+              your interests and listening habits.</p>
+            <div class="feature-highlight">
+              <span class="badge bg-primary">AI Powered</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon">
+              <i class="fas fa-cloud-download-alt text-primary"></i>
+            </div>
+            <h4 class="feature-title" data-translate="offlineListening">Offline Listening</h4>
+            <p class="feature-description" data-translate="offlineDesc">Download your favorite episodes and listen
+              anywhere, anytime without an
+              internet connection.</p>
+            <div class="feature-highlight">
+              <span class="badge bg-success">Offline Ready</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-lg-4 col-md-6 mb-4 mb-lg-0">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon">
+              <i class="fas fa-users text-primary"></i>
+            </div>
+            <h4 class="feature-title" data-translate="communityFeatures">Community Features</h4>
+            <p class="feature-description" data-translate="communityDesc">Connect with fellow listeners, share reviews,
+              and join discussions about your
+              favorite podcasts.</p>
+            <div class="feature-highlight">
+              <span class="badge bg-info">Social</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-lg-4 col-md-6 mt-4">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon">
+              <i class="fas fa-sync-alt text-primary"></i>
+            </div>
+            <h4 class="feature-title" data-translate="crossPlatform">Cross-Platform Sync</h4>
+            <p class="feature-description" data-translate="crossPlatformDesc">Seamlessly sync your listening progress
+              across all your devices - phone,
+              tablet, and desktop.</p>
+            <div class="feature-highlight">
+              <span class="badge bg-warning text-dark">Multi-Device</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 5 -->
+        <div class="col-lg-4 col-md-6 mt-4">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon">
+              <i class="fas fa-chart-line text-primary"></i>
+            </div>
+            <h4 class="feature-title" data-translate="analytics">Analytics & Insights</h4>
+            <p class="feature-description" data-translate="analyticsDesc">Track your listening habits with detailed
+              analytics and get personalized
+              insights about your podcast journey.</p>
+            <div class="feature-highlight">
+              <span class="badge bg-secondary">Analytics</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature 6 -->
+        <div class="col-lg-4 col-md-6 mt-4">
+          <div class="feature-card h-100 text-center">
+            <div class="feature-icon">
+              <i class="fas fa-shield-alt text-primary"></i>
+            </div>
+            <h4 class="feature-title" data-translate="adFree">Ad-Free Experience</h4>
+            <p class="feature-description" data-translate="adFreeDesc">Enjoy uninterrupted listening with our premium
+              ad-free experience and
+              exclusive content access.</p>
+            <div class="feature-highlight">
+              <span class="badge bg-danger">Premium</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Call to Action -->
+      <div class="text-center mt-5">
+        <h3 class="mb-4" data-translate="readyExperience">Ready to Experience the Future of Podcasting?</h3>
+        <div class="d-flex gap-3 justify-content-center flex-wrap">
+          <a href="#categories" class="btn btn-primary btn-lg rounded-pill px-4">
+            <i class="fas fa-rocket me-2"></i><span data-translate="getStarted">Get Started</span>
+          </a>
+          <a href="#newsletter" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+            <i class="fas fa-envelope me-2"></i><span data-translate="stayUpdated">Stay Updated</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- What Is Podcast Section -->
+  <section id="what-is-podcast" class="py-5 dark-section">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6" data-aos="fade-right">
+          <div class="what-is-podcast-content">
+            <h2 class="display-5 fw-bold mb-4 text-white" data-translate="whatIsPodcastTitle">What Is A Podcast?</h2>
+            <p class="lead mb-4 text-light" data-translate="whatIsPodcastDesc">
+              A podcast is a digital audio program that you can download or stream on your device. Think of it as your
+              personal radio show that you can listen to anytime, anywhere.
+            </p>
+            <div class="podcast-features">
+              <div class="feature-item d-flex align-items-start mb-3">
+                <div class="feature-icon-small me-5">
+                  <i class="fas fa-download text-white"></i>
+                </div>
+                <div>
+                  <h5 class="mb-2 text-white" data-translate="downloadListen">Download & Listen Offline</h5>
+                  <p class="text-light mb-0" data-translate="downloadDesc">Save episodes to your device and listen
+                    without an internet connection.</p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-start mb-3">
+                <div class="feature-icon-small me-5">
+                  <i class="fas fa-clock text-white"></i>
+                </div>
+                <div>
+                  <h5 class="mb-2 text-white" data-translate="listenSchedule">Listen On Your Schedule</h5>
+                  <p class="text-light mb-0" data-translate="scheduleDesc">Pause, rewind, fast-forward - control your
+                    listening experience.</p>
+                </div>
+              </div>
+              <div class="feature-item d-flex align-items-start mb-3">
+                <div class="feature-icon-small me-5">
+                  <i class="fas fa-globe text-white"></i>
+                </div>
+                <div>
+                  <h5 class="mb-2 text-white" data-translate="diverseContent">Diverse Content</h5>
+                  <p class="text-light mb-0" data-translate="diverseDesc">From education to entertainment, find content
+                    that matches your interests.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="mt-4">
+              <a href="#categories" class="btn btn-primary btn-lg rounded-pill me-3">
+                <i class="fas fa-play me-2"></i><span data-translate="startListening">Start Listening</span>
+              </a>
+              <a href="#contact" class="btn btn-outline-primary btn-lg rounded-pill">
+                <i class="fas fa-question-circle me-2"></i><span data-translate="learnMore">Learn More</span>
+              </a>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6" data-aos="fade-left">
+          <div class="podcast-visual">
+            <div class="podcast-device">
+              <div class="phone-mockup">
+                <div class="phone-screen">
+                  <div class="podcast-player">
+                    <div class="player-header">
+                      <div class="podcast-cover"></div>
+                      <div class="podcast-info">
+                        <h6 class="mb-1">Now Playing</h6>
+                        <p class="mb-0 text-muted small">Tech Talk Weekly</p>
+                      </div>
+                    </div>
+                    <div class="progress-bar">
+                      <div class="progress"></div>
+                    </div>
+                    <div class="player-controls">
+                      <i class="fas fa-step-backward"></i>
+                      <i class="fas fa-play-circle fa-2x text-primary"></i>
+                      <i class="fas fa-step-forward"></i>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="floating-icons">
+                <div class="icon-float icon-1"><i class="fas fa-microphone"></i></div>
+                <div class="icon-float icon-2"><i class="fas fa-headphones"></i></div>
+                <div class="icon-float icon-3"><i class="fas fa-volume-up"></i></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Form Section -->
+  <section id="contact" class="py-5 dark-section">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3 text-white" data-translate="getInTouch">Get In Touch</h2>
+            <p class="lead text-light" data-translate="getInTouchDesc">Have questions, suggestions, or want to submit a
+              podcast? We'd love to hear from
+              you!</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="contact-form-container" data-aos="fade-up" data-aos-delay="200">
+            <form class="contact-form modern-form">
+              <div class="form-header mb-4">
+                <div class="form-icon">
+                  <i class="fas fa-envelope-open"></i>
+                </div>
+                <h4 class="text-white mb-2" data-translate="sendMessage">Send us a message</h4>
+                <p class="text-light opacity-75" data-translate="getBack">We'll get back to you within 24 hours</p>
+              </div>
+
+              <div class="row g-4">
+                <div class="col-md-6">
+                  <div class="modern-input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <input type="text" class="modern-input" id="firstName" placeholder="Enter your first name"
+                      data-translate-placeholder="firstNamePlaceholder" required>
+                    <label for="firstName" class="modern-label" data-translate="firstName">First Name</label>
+                    <div class="input-border"></div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="modern-input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <input type="text" class="modern-input" id="lastName" placeholder="Enter your last name"
+                      data-translate-placeholder="lastNamePlaceholder" required>
+                    <label for="lastName" class="modern-label" data-translate="lastName">Last Name</label>
+                    <div class="input-border"></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="modern-input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <input type="email" class="modern-input" id="email" placeholder="Enter your email address"
+                      data-translate-placeholder="emailPlaceholder" required>
+                    <label for="email" class="modern-label" data-translate="emailAddress">Email Address</label>
+                    <div class="input-border"></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="modern-select-group">
+                    <div class="input-icon">
+                      <i class="fas fa-tag"></i>
+                    </div>
+                    <select class="modern-select" id="subject" required>
+                      <option value="" disabled selected hidden></option>
+                      <option value="general" data-translate="generalInquiry">General Inquiry</option>
+                      <option value="podcast-submission" data-translate="podcastSubmission">Podcast Submission</option>
+                      <option value="technical-support" data-translate="technicalSupport">Technical Support</option>
+                      <option value="partnership" data-translate="partnershipOpportunity">Partnership Opportunity
+                      </option>
+                      <option value="feedback" data-translate="feedback">Feedback</option>
+                    </select>
+                    <label for="subject" class="modern-label" data-translate="subject">Subject</label>
+                    <div class="input-border"></div>
+                    <div class="select-arrow">
+                      <i class="fas fa-chevron-down"></i>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="modern-textarea-group">
+                    <div class="input-icon">
+                      <i class="fas fa-comment"></i>
+                    </div>
+                    <textarea class="modern-textarea" id="message" rows="4"
+                      placeholder="Tell us about your inquiry, feedback, or podcast submission..."
+                      data-translate-placeholder="messagePlaceholder" required></textarea>
+                    <label for="message" class="modern-label" data-translate="yourMessage">Your Message</label>
+                    <div class="input-border"></div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="modern-checkbox-group">
+                    <input class="modern-checkbox" type="checkbox" id="newsletter" value="">
+                    <label class="modern-checkbox-label" for="newsletter">
+                      <div class="checkbox-box">
+                        <i class="fas fa-check"></i>
+                      </div>
+                      <span data-translate="newsletterSubscribe">Subscribe to our newsletter for updates on new
+                        podcasts</span>
+                    </label>
+                  </div>
+                </div>
+                <div class="col-12 text-center">
+                  <button type="submit" class="modern-submit-btn">
+                    <span class="btn-text">
+                      <i class="fas fa-paper-plane me-2"></i><span data-translate="sendMessageBtn">Send Message</span>
+                    </span>
+                    <div class="btn-bg"></div>
+                    <div class="btn-ripple"></div>
+                  </button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact Info Cards -->
+      <div class="row mt-5 g-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon">
+              <i class="fas fa-envelope"></i>
+            </div>
+            <h5 class="text-white mb-2" data-translate="emailUs">Email Us</h5>
+            <p class="text-light mb-0">hello@podcastslibrary.com</p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon">
+              <i class="fas fa-podcast"></i>
+            </div>
+            <h5 class="text-white mb-2" data-translate="submitPodcast">Submit Podcast</h5>
+            <p class="text-light mb-0" data-translate="submitPodcastDesc">Share your amazing content with our community
+            </p>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="contact-info-card text-center">
+            <div class="contact-icon">
+              <i class="fas fa-headset"></i>
+            </div>
+            <h5 class="text-white mb-2" data-translate="support">Support</h5>
+            <p class="text-light mb-0" data-translate="supportDesc">We're here to help you 24/7</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section
+  <section class="newsletter-section py-5">
+    <div class="container">
+      <div class="row justify-content-center text-center">
+        <div class="col-lg-8">
+          <h3 class="mb-3">Stay Updated with New Podcasts</h3>
+          <p class="mb-4">Subscribe to get notified when new podcasts are added to our library.</p>
+          <div class="newsletter-form d-flex">
+            <input type="email" class="form-control" placeholder="Enter your email address">
+            <button class="btn btn-warning">Subscribe</button>
+          </div>
+        </div>
+      </div> -->
+  <!-- </div> -->
+  <!-- </section>
+  <div class="podcast-overlay">
+    <a href="https://podcasts.apple.com/sa/podcast/%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA-%D8%A3%D8%A8%D8%AC%D9%88%D8%B1%D8%A9/id1272687671"
+      class="btn btn-primary rounded-pill">
+      <i class="fas fa-play me-2"></i>Listen Now
+    </a>
+  </div>
+  <div class="rating-badge">
+    <i class="fas fa-star text-warning"></i>
+    <span class="fw-bold">4.8</span>
+  </div>
+  </div>
+  <div class="card-body">
+    <h5 class="card-title fw-bold">أبجورة</h5>
+    <p class="card-text text-muted">نقاشات عميقة حول الأدب والثقافة والحياة</p>
+    <div class="d-flex justify-content-between align-items-center">
+      <span class="badge bg-success">Culture</span>
+      <small class="text-muted">
+        <i class="fas fa-headphones me-1"></i>72k listeners
+      </small>
+    </div>
+  </div>
+  </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card h-100 shadow-sm podcast-card-featured">
+      <div class="podcast-image-container position-relative">
+        <img src="image/swalef.jpg" class="card-img-top" alt="سوالف بزنس" style="height: 200px; object-fit: cover;">
+        <div class="podcast-overlay">
+          <a href="https://podcasts.apple.com/us/podcast/%D8%B3%D9%88%D8%A7%D9%84%D9%81-%D8%A8%D8%B2%D9%86%D8%B3-%D9%85%D8%B9-%D9%85%D8%B4%D9%87%D9%88%D8%B1-%D8%A7%D9%84%D8%AF%D8%A8%D9%8A%D8%A7%D9%86/id1239234534"
+            class="btn btn-primary rounded-pill">
+            <i class="fas fa-play me-2"></i>Listen Now
+          </a>
+        </div>
+        <div class="rating-badge">
+          <i class="fas fa-star text-warning"></i>
+          <span class="fw-bold">4.7</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title fw-bold">سوالف بزنس</h5>
+        <p class="card-text text-muted">قصص نجاح وتجارب ملهمة في عالم الأعمال</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-warning text-dark">Business</span>
+          <small class="text-muted">
+            <i class="fas fa-headphones me-1"></i>68k listeners
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card h-100 shadow-sm podcast-card-featured">
+      <div class="podcast-image-container position-relative">
+        <img src="image/roqia.jpg" class="card-img-top" alt="الرؤية" style="height: 200px; object-fit: cover;">
+        <div class="podcast-overlay">
+          <a href="https://podcasts.apple.com/us/podcast/alroya-podcasts-%D8%A7%D9%84%D8%B1%D8%A4%D9%8A%D8%A9-%D8%A8%D9%88%D8%AF%D9%83%D8%A7%D8%B3%D8%AA/id1495651008"
+            class="btn btn-primary rounded-pill">
+            <i class="fas fa-play me-2"></i>Listen Now
+          </a>
+        </div>
+        <div class="rating-badge">
+          <i class="fas fa-star text-warning"></i>
+          <span class="fw-bold">4.6</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title fw-bold">الرؤية</h5>
+        <p class="card-text text-muted">رؤى عميقة حول مختلف جوانب الحياة والمجتمع</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-info">Social</span>
+          <small class="text-muted">
+            <i class="fas fa-headphones me-1"></i>55k listeners
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card h-100 shadow-sm podcast-card-featured">
+      <div class="podcast-image-container position-relative">
+        <img src="image/ashiaa.jpg" class="card-img-top" alt="أشياء غيرتنا" style="height: 200px; object-fit: cover;">
+        <div class="podcast-overlay">
+          <a href="https://podcasts.apple.com/us/podcast/%D8%A3%D8%B4%D9%8A%D8%A7%D8%A1-%D8%BA%D9%8A%D8%B1%D8%AA%D9%86%D8%A7/id1480610796"
+            class="btn btn-primary rounded-pill">
+            <i class="fas fa-play me-2"></i>Listen Now
+          </a>
+        </div>
+        <div class="rating-badge">
+          <i class="fas fa-star text-warning"></i>
+          <span class="fw-bold">4.8</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title fw-bold">أشياء غيرتنا</h5>
+        <p class="card-text text-muted">استكشاف الأشياء التي غيرت مجرى التاريخ والحياة</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-secondary">History</span>
+          <small class="text-muted">
+            <i class="fas fa-headphones me-1"></i>61k listeners
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card h-100 shadow-sm podcast-card-featured">
+      <div class="podcast-image-container position-relative">
+        <img src="image/socrat.jpg" class="card-img-top" alt="سقراط" style="height: 200px; object-fit: cover;">
+        <div class="podcast-overlay">
+          <a href="https://podcasts.apple.com/us/podcast/%D8%B3%D9%82%D8%B1%D8%A7%D8%B7-%D9%85%D8%B9-%D8%B9%D9%85%D8%B1-%D8%A7%D9%84%D8%AC%D8%B1%D9%8A%D8%B3%D9%8A/id1459232606"
+            class="btn btn-primary rounded-pill">
+            <i class="fas fa-play me-2"></i>Listen Now
+          </a>
+        </div>
+        <div class="rating-badge">
+          <i class="fas fa-star text-warning"></i>
+          <span class="fw-bold">4.9</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title fw-bold">سقراط</h5>
+        <p class="card-text text-muted">فلسفة وحكمة في نقاشات عميقة ومثيرة للتفكير</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-dark">Philosophy</span>
+          <small class="text-muted">
+            <i class="fas fa-headphones me-1"></i>78k listeners
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card h-100 shadow-sm podcast-card-featured">
+      <div class="podcast-image-container position-relative">
+        <img src="image/jazira.jpg" class="card-img-top" alt="الجزيرة" style="height: 200px; object-fit: cover;">
+        <div class="podcast-overlay">
+          <a href="https://podcasts.apple.com/us/podcast/%D9%85%D8%AC%D9%84%D8%A9-%D8%A7%D9%84%D8%B5%D8%AD%D8%A7%D9%81%D8%A9-al-jazeera-journalism-review/id1554853121"
+            class="btn btn-primary rounded-pill">
+            <i class="fas fa-play me-2"></i>Listen Now
+          </a>
+        </div>
+        <div class="rating-badge">
+          <i class="fas fa-star text-warning"></i>
+          <span class="fw-bold">4.5</span>
+        </div>
+      </div>
+      <div class="card-body">
+        <h5 class="card-title fw-bold">الجزيرة</h5>
+        <p class="card-text text-muted">مراجعة الصحافة والإعلام مع تحليلات معمقة</p>
+        <div class="d-flex justify-content-between align-items-center">
+          <span class="badge bg-danger">Media</span>
+          <small class="text-muted">
+            <i class="fas fa-headphones me-1"></i>45k listeners
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-lg-4 col-md-6">
+    <div class="card h-100 shadow-sm podcast-card-featured">
+      <div class="podcast-image-container position-relative">
+        <img src="image/qahwa.jpeg" class="card-img-top" alt="قهوة وخبرية" style="height: 200px; object-fit: cover;">
+        <div class="podcast-overlay">
+          <a href="https://podcasts.apple.com/us/podcast/%D9%82%D9%87%D9%88%D8%A9-%D9%88%D8%AE%D8%A8%D8%B1%D9%8A%D8%A9-%D9%85%D8%B9-%D9%85%D8%A7%D9%8A%D8%A7-%D8%AD%D8%AC%D9%8A%D8%AC/id1534708077"
+            class="btn btn-primary rounded-pill">
+            <i class="fas fa-play me-2"></i>Listen Now
+          </a>
+        </div>
+        <p class="mb-4">Subscribe to get notified when new podcasts are added to our library.</p>
+        <div class="newsletter-form d-flex">
+          <input type="email" class="form-control" placeholder="Enter your email address">
+          <button class="btn btn-warning">Subscribe</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  </section> -->
+
+
+
+
+
+
+  <!-- 
+  <hr>
+  <footer> -->
+  <!-- <ul class="wrapper" id="wrapper">
+      <li class="icon facebook">
+        <span class="tooltip">Facebook</span>
+        <svg viewBox="0 0 320 512" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+          <path
+            d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+          </path>
+        </svg>
+      </li>
+      <li class="icon twitter">
+        <span class="tooltip">Twitter</span>
+        <svg height="1.8em" fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" class="twitter">
+          <path
+            d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429">
+          </path>
+        </svg>
+      </li>
+      <li class="icon instagram">
+        <span class="tooltip">Instagram</span>
+        <svg xmlns="http://www.w3.org/2000/svg" height="1.2em" fill="currentColor" class="bi bi-instagram"
+          viewBox="0 0 16 16">
+          <path
+            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z">
+          </path>
+        </svg>
+      </li>
+    </ul> -->
+
+  <section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white footer-dark dark-section">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <a class="me-3" href="#categories">Explore More Podcasts</a>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
+
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Podcasts Library - All Rights Reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
+
   </footer>
-  <!-- Footer -->
-</section>
 
-</footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="common-functions.js"></script>
+  <script>
+    // Search functionality specific to index page
+    function searchCategories() {
+      const searchInput = document.getElementById('searchInput');
+      const filter = searchInput.value.toLowerCase();
+      const categoriesContainer = document.getElementById('categoriesContainer');
+      const categories = categoriesContainer.getElementsByClassName('category-card');
 
+      for (let i = 0; i < categories.length; i++) {
+        const category = categories[i];
+        const categoryText = category.getAttribute('data-category').toLowerCase();
+        const categoryName = category.textContent.toLowerCase();
 
+        if (categoryText.indexOf(filter) > -1 || categoryName.indexOf(filter) > -1) {
+          category.style.display = '';
+          category.style.animation = 'fadeIn 0.3s ease';
+        } else {
+          category.style.display = 'none';
+        }
+      }
+    }
 
+    // Search from navbar
+    function searchFromNav() {
+      const navSearchInput = document.getElementById('searchInputInline');
+      const mainSearchInput = document.getElementById('searchInput');
 
-    
-    <script src="js/popper.min.js"></script>
-    <script src="js/jquery-3.7.1.min.js"></script>
-    <script src="js/bootstrap.js"></script>
+      // Copy search term to main search input
+      if (mainSearchInput && navSearchInput) {
+        mainSearchInput.value = navSearchInput.value;
+        searchCategories();
 
-    
+        // Scroll to categories section
+        const categoriesSection = document.getElementById('categories');
+        if (categoriesSection) {
+          categoriesSection.scrollIntoView({ behavior: 'smooth' });
+        }
+      }
+    }
+
+    // Smooth scrolling for internal links
+    document.addEventListener('DOMContentLoaded', function () {
+      // Smooth scroll for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
+
+      // Add hover effects to category cards
+      const categoryCards = document.querySelectorAll('.category-item');
+      categoryCards.forEach(card => {
+        card.addEventListener('mouseenter', function () {
+          this.style.transform = 'translateY(-5px)';
+          this.style.transition = 'transform 0.3s ease';
+        });
+
+        card.addEventListener('mouseleave', function () {
+          this.style.transform = 'translateY(0)';
+        });
+      });
+
+      // Counter Animation
+      function animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const increment = target / 100;
+        let current = 0;
+
+        const timer = setInterval(() => {
+          current += increment;
+          if (current >= target) {
+            element.textContent = target + '+';
+            clearInterval(timer);
+          } else {
+            element.textContent = Math.floor(current) + '+';
+          }
+        }, 20);
+      }
+
+      // Intersection Observer for counters
+      const counters = document.querySelectorAll('.counter');
+      const counterObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            animateCounter(entry.target);
+            counterObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.5 });
+
+      counters.forEach(counter => {
+        counterObserver.observe(counter);
+      });
+    });
+  </script>
+
+  <!-- Contact Form JavaScript -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const contactForm = document.querySelector('.contact-form');
+
+      // Modern form interactions
+      const modernInputs = document.querySelectorAll('.modern-input, .modern-select, .modern-textarea');
+
+      // Function to check and update label state
+      function updateLabelState(input) {
+        const label = input.nextElementSibling;
+        const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+
+        // Only manipulate labels in light mode
+        if (!isLightMode) {
+          return;
+        }
+
+        if (input.value && input.value.trim() !== '') {
+          label.style.transform = 'translateY(-35px) scale(0.85)';
+          label.style.color = '#007bff';
+          label.style.fontWeight = '600';
+        } else if (document.activeElement !== input) {
+          label.style.transform = 'translateY(-50%) scale(1)';
+          label.style.color = 'rgba(255, 255, 255, 0.7)';
+          label.style.fontWeight = 'normal';
+        }
+      }
+
+      modernInputs.forEach(input => {
+        // Handle focus events
+        input.addEventListener('focus', function () {
+          const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+
+          // Only manipulate labels in light mode
+          if (!isLightMode) {
+            return;
+          }
+
+          const label = this.nextElementSibling;
+          label.style.transform = 'translateY(-35px) scale(0.85)';
+          label.style.color = '#007bff';
+          label.style.fontWeight = '600';
+        });
+
+        // Handle blur events
+        input.addEventListener('blur', function () {
+          updateLabelState(this);
+        });
+
+        // Handle input events (real-time typing)
+        input.addEventListener('input', function () {
+          updateLabelState(this);
+        });
+
+        // Check initial state on page load
+        updateLabelState(input);
+      });
+
+      // Special handling for select element
+      const modernSelect = document.getElementById('subject');
+      if (modernSelect) {
+        // Set initial state
+        modernSelect.value = '';
+        updateLabelState(modernSelect);
+
+        modernSelect.addEventListener('change', function () {
+          updateLabelState(this);
+        });
+
+        // Also handle focus/blur for select
+        modernSelect.addEventListener('focus', function () {
+          const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+
+          // Only manipulate labels in light mode
+          if (!isLightMode) {
+            return;
+          }
+
+          const label = this.nextElementSibling;
+          label.style.transform = 'translateY(-35px) scale(0.85)';
+          label.style.color = '#007bff';
+          label.style.fontWeight = '600';
+        });
+
+        modernSelect.addEventListener('blur', function () {
+          updateLabelState(this);
+        });
+      }
+
+      if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+
+          // Get form data
+          const formData = new FormData(this);
+          const firstName = document.getElementById('firstName').value;
+          const lastName = document.getElementById('lastName').value;
+          const email = document.getElementById('email').value;
+          const subject = document.getElementById('subject').value;
+          const message = document.getElementById('message').value;
+
+          // Simple validation
+          if (!firstName || !lastName || !email || !subject || !message) {
+            showNotification('Please fill in all required fields.', 'error');
+            return;
+          }
+
+          // Email validation
+          const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+          if (!emailRegex.test(email)) {
+            showNotification('Please enter a valid email address.', 'error');
+            return;
+          }
+
+          // Show loading state
+          const submitBtn = this.querySelector('.modern-submit-btn') || this.querySelector('button[type="submit"]');
+          const btnText = submitBtn.querySelector('.btn-text') || submitBtn;
+          const originalText = btnText.innerHTML;
+          btnText.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+          submitBtn.disabled = true;
+
+          // Simulate form submission (replace with actual submission logic)
+          setTimeout(() => {
+            showNotification('Thank you for your message! We\'ll get back to you soon.', 'success');
+
+            // Reset form
+            this.reset();
+
+            // Reset all labels to initial state
+            modernInputs.forEach(input => {
+              const label = input.nextElementSibling;
+              label.style.transform = 'translateY(-50%) scale(1)';
+              label.style.color = 'rgba(255, 255, 255, 0.7)';
+              label.style.fontWeight = 'normal';
+            });
+
+            // Specifically reset select element
+            if (modernSelect) {
+              modernSelect.value = '';
+              updateLabelState(modernSelect);
+            }
+
+            // Reset button
+            btnText.innerHTML = originalText;
+            submitBtn.disabled = false;
+          }, 2000);
+        });
+      }
+
+      // Notification function
+      function showNotification(message, type) {
+        // Remove existing notifications
+        const existing = document.querySelector('.notification');
+        if (existing) {
+          existing.remove();
+        }
+
+        // Create notification
+        const notification = document.createElement('div');
+        notification.className = `notification alert alert-${type === 'success' ? 'success' : 'danger'} position-fixed`;
+        notification.style.cssText = `
+          top: 20px;
+          right: 20px;
+          z-index: 9999;
+          min-width: 300px;
+          border-radius: 10px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+          animation: slideInRight 0.3s ease;
+        `;
+
+        notification.innerHTML = `
+          <div class="d-flex align-items-center">
+            <i class="fas fa-${type === 'success' ? 'check-circle' : 'exclamation-circle'} me-2"></i>
+            ${message}
+            <button type="button" class="btn-close ms-auto" aria-label="Close"></button>
+          </div>
+        `;
+
+        document.body.appendChild(notification);
+
+        // Auto remove after 5 seconds
+        setTimeout(() => {
+          if (notification.parentNode) {
+            notification.style.animation = 'slideOutRight 0.3s ease';
+            setTimeout(() => notification.remove(), 300);
+          }
+        }, 5000);
+
+        // Manual close
+        notification.querySelector('.btn-close').addEventListener('click', () => {
+          notification.style.animation = 'slideOutRight 0.3s ease';
+          setTimeout(() => notification.remove(), 300);
+        });
+      }
+
+      // Add CSS animations for notifications
+      if (!document.querySelector('#notification-styles')) {
+        const style = document.createElement('style');
+        style.id = 'notification-styles';
+        style.textContent = `
+          @keyframes slideInRight {
+            from { transform: translateX(100%); opacity: 0; }
+            to { transform: translateX(0); opacity: 1; }
+          }
+          
+          @keyframes slideOutRight {
+            from { transform: translateX(0); opacity: 1; }
+            to { transform: translateX(100%); opacity: 0; }
+          }
+        `;
+        document.head.appendChild(style);
+      }
+    });
+  </script>
+
+  <!-- AOS Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Enhanced Card Animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Enhanced intersection observer for card animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0) scale(1)';
+            }, index * 100); // Staggered animation
+          }
+        });
+      }, observerOptions);
+
+      // Apply to category cards
+      const categoryCards = document.querySelectorAll('#categories .category-item');
+      categoryCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px) scale(0.95)';
+        card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        cardObserver.observe(card);
+      });
+
+      // Apply to feature cards
+      const featureCards = document.querySelectorAll('#features .feature-card');
+      featureCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px) scale(0.9)';
+        card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        cardObserver.observe(card);
+      });
+
+      // Add hover sound effect simulation (visual feedback)
+      const allCards = document.querySelectorAll('.category-item, .feature-card, .contact-info-card');
+      allCards.forEach(card => {
+        card.addEventListener('mouseenter', function () {
+          this.style.transition = 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        });
+
+        card.addEventListener('mouseleave', function () {
+          this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        });
+      });
+
+      // Add click animation
+      allCards.forEach(card => {
+        card.addEventListener('mousedown', function () {
+          this.style.transform = this.style.transform.replace(/scale\([^)]*\)/, '') + ' scale(0.95)';
+        });
+
+        card.addEventListener('mouseup', function () {
+          this.style.transform = this.style.transform.replace(/scale\([^)]*\)/, '');
+        });
+      });
+    });
+  </script>
+
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      once: true,
+      offset: 100
+    });
+  </script>
+
 </body>
+
 </html>
