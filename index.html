@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ar" dir="ltr">
 
 <head>
   <meta charset="UTF-8">
@@ -9,9 +9,12 @@
   <link rel="stylesheet" href="stylees.css">
   <link rel="stylesheet" href="navbar-styles.css">
   <link rel="stylesheet" href="sections-style.css">
+  <link rel="stylesheet" href="css/language-styles.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
   <script src="navbar-loader.js"></script>
+  <!-- Translation System -->
+  <script src="js/translation-system.js"></script>
 </head>
 
 <body>
@@ -27,19 +30,19 @@
     <div class="container">
       <div class="row align-items-center text-white">
         <div class="col-lg-8 col-md-10 mx-auto text-center">
-          <h1 class="display-2 fw-bold mb-4 text-shadow" data-aos="fade-up">
-            Discover Amazing Podcasts
+          <h1 class="display-2 fw-bold mb-4 text-shadow" data-aos="fade-up" data-translate="heroTitle">
+            اكتشف<br>مذهلة<br>البودكاست
           </h1>
-          <p class="lead mb-5 fs-4 text-shadow" data-aos="fade-up" data-aos-delay="200">
-            Your ultimate destination for the best podcasts across all categories. From technology to
-            entertainment, we've got you covered.
+          <p class="lead mb-5 fs-4 text-shadow" data-aos="fade-up" data-aos-delay="200"
+            data-translate="heroDescription">
+            وجهتك النهائية لأفضل البودكاست في جميع الفئات. من التكنولوجيا إلى الترفيه، نحن نغطي كل شيء.
           </p>
           <div class="d-flex gap-3 mb-5 justify-content-center flex-wrap" data-aos="fade-up" data-aos-delay="400">
             <a href="#categories" class="btn btn-light btn-lg rounded-pill px-5 py-3 shadow">
-              <i class="fas fa-play me-2"></i>Explore Categories
+              <i class="fas fa-play me-2"></i><span data-translate="exploreNow">استكشف الفئات</span>
             </a>
             <a href="#top-rated" class="btn btn-outline-light btn-lg rounded-pill px-5 py-3">
-              <i class="fas fa-star me-2"></i>Top Rated
+              <i class="fas fa-star me-2"></i><span data-translate="topRated">الأعلى تقييماً</span>
             </a>
           </div>
         </div>
@@ -54,7 +57,7 @@
                 <i class="fas fa-th-large"></i>
               </div>
               <h3 class="fw-bold display-4 counter" data-target="12" style="color: white !important;">12+</h3>
-              <p class="mb-0 stat-label" style="color: white !important;">Categories</p>
+              <p class="mb-0 stat-label" style="color: white !important;" data-translate="categoriesCount">الفئات</p>
             </div>
           </div>
         </div>
@@ -65,7 +68,7 @@
                 <i class="fas fa-podcast"></i>
               </div>
               <h3 class="fw-bold display-4 counter" data-target="500" style="color: white !important;">500+</h3>
-              <p class="mb-0 stat-label" style="color: white !important;">Podcasts</p>
+              <p class="mb-0 stat-label" style="color: white !important;" data-translate="podcastsCount">البودكاست</p>
             </div>
           </div>
         </div>
@@ -76,7 +79,7 @@
                 <i class="fas fa-users"></i>
               </div>
               <h3 class="fw-bold display-4 counter" data-target="100" style="color: white !important;">100k+</h3>
-              <p class="mb-0 stat-label" style="color: white !important;">Listeners</p>
+              <p class="mb-0 stat-label" style="color: white !important;" data-translate="listeners">المستمعين</p>
             </div>
           </div>
         </div>
@@ -95,15 +98,15 @@
   <section id="categories" class="py-5 dark-section">
     <div class="container-fluid px-4">
       <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold mb-3 text-white">Browse Categories</h2>
-        <p class="lead text-light">Find podcasts by your favorite topics</p>
+        <h2 class="display-5 fw-bold mb-3 text-white" data-translate="browseCategoriesTitle">تصفح الفئات</h2>
+        <p class="lead text-light" data-translate="browseCategoriesSubtitle">ابحث عن البودكاست حسب مواضيعك المفضلة</p>
 
         <!-- Search Bar -->
         <div class="row justify-content-center mt-4">
           <div class="col-lg-6">
             <div class="input-group input-group-lg">
-              <input type="text" class="form-control rounded-pill" placeholder="Search for podcasts..." id="searchInput"
-                onkeyup="searchCategories()">
+              <input type="text" class="form-control rounded-pill" placeholder="البحث عن البودكاست..." id="searchInput"
+                data-translate-placeholder="searchPlaceholder" onkeyup="searchCategories()">
               <button class="btn btn-primary rounded-pill ms-2" type="button">
                 <i class="fas fa-search"></i>
               </button>
@@ -122,10 +125,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Sports</h5>
-                <p class="card-text category-description">Latest sports news, analysis, and interviews</p>
+                <h5 class="card-title fw-bold" data-translate="sports">Sports</h5>
+                <p class="card-text category-description" data-translate="sportsDesc">Latest sports news, analysis, and
+                  interviews</p>
                 <div class="category-meta">
-                  <span class="badge bg-primary">25+ Podcasts</span>
+                  <span class="badge bg-primary">25+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -140,10 +144,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Art & Entertainment</h5>
-                <p class="card-text category-description">Movies, music, books, and creative content</p>
+                <h5 class="card-title fw-bold" data-translate="art">Art & Entertainment</h5>
+                <p class="card-text category-description" data-translate="artEntertainmentDesc">Movies, music, books,
+                  and creative content</p>
                 <div class="category-meta">
-                  <span class="badge bg-success">30+ Podcasts</span>
+                  <span class="badge bg-success">30+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -158,10 +163,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Technical</h5>
-                <p class="card-text category-description">Programming, AI, cybersecurity, and tech trends</p>
+                <h5 class="card-title fw-bold" data-translate="technical">Technical</h5>
+                <p class="card-text category-description" data-translate="technicalDesc">Programming, AI, cybersecurity,
+                  and tech trends</p>
                 <div class="category-meta">
-                  <span class="badge bg-info">40+ Podcasts</span>
+                  <span class="badge bg-info">40+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -176,10 +182,12 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Business</h5>
-                <p class="card-text category-description">Entrepreneurship, leadership, and market insights</p>
+                <h5 class="card-title fw-bold" data-translate="business">Business</h5>
+                <p class="card-text category-description" data-translate="businessDesc">Entrepreneurship, leadership,
+                  and market insights</p>
                 <div class="category-meta">
-                  <span class="badge bg-warning text-dark">35+ Podcasts</span>
+                  <span class="badge bg-warning text-dark">35+ <span
+                      data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -194,10 +202,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Science</h5>
-                <p class="card-text category-description">Research, discoveries, and scientific discussions</p>
+                <h5 class="card-title fw-bold" data-translate="science">Science</h5>
+                <p class="card-text category-description" data-translate="scienceDesc">Research, discoveries, and
+                  scientific discussions</p>
                 <div class="category-meta">
-                  <span class="badge bg-danger">20+ Podcasts</span>
+                  <span class="badge bg-danger">20+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -212,10 +221,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Health & Wellness</h5>
-                <p class="card-text category-description">Fitness, nutrition, mental health, and wellbeing</p>
+                <h5 class="card-title fw-bold" data-translate="health">Health & Wellness</h5>
+                <p class="card-text category-description" data-translate="healthWellnessDesc">Fitness, nutrition, mental
+                  health, and wellbeing</p>
                 <div class="category-meta">
-                  <span class="badge bg-success">28+ Podcasts</span>
+                  <span class="badge bg-success">28+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -230,10 +240,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Self-Development</h5>
-                <p class="card-text category-description">Personal growth, productivity, and life skills</p>
+                <h5 class="card-title fw-bold" data-translate="selfDevelopment">Self-Development</h5>
+                <p class="card-text category-description" data-translate="selfDevelopmentDesc">Personal growth,
+                  productivity, and life skills</p>
                 <div class="category-meta">
-                  <span class="badge bg-primary">22+ Podcasts</span>
+                  <span class="badge bg-primary">22+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -248,10 +259,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Personal</h5>
-                <p class="card-text category-description">Life stories, experiences, and personal journeys</p>
+                <h5 class="card-title fw-bold" data-translate="personal">Personal</h5>
+                <p class="card-text category-description" data-translate="personalDesc">Life stories, experiences, and
+                  personal journeys</p>
                 <div class="category-meta">
-                  <span class="badge bg-secondary">18+ Podcasts</span>
+                  <span class="badge bg-secondary">18+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -266,10 +278,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Social</h5>
-                <p class="card-text category-description">Society, culture, and social issues discussions</p>
+                <h5 class="card-title fw-bold" data-translate="social">Social</h5>
+                <p class="card-text category-description" data-translate="socialDesc">Society, culture, and social
+                  issues discussions</p>
                 <div class="category-meta">
-                  <span class="badge bg-info">26+ Podcasts</span>
+                  <span class="badge bg-info">26+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -284,10 +297,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">News & Media</h5>
-                <p class="card-text category-description">Current events, journalism, and media analysis</p>
+                <h5 class="card-title fw-bold" data-translate="news">News & Media</h5>
+                <p class="card-text category-description" data-translate="newsMediaDesc">Current events, journalism, and
+                  media analysis</p>
                 <div class="category-meta">
-                  <span class="badge bg-dark">32+ Podcasts</span>
+                  <span class="badge bg-dark">32+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -302,10 +316,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">Education & Culture</h5>
-                <p class="card-text category-description">Learning, history, and cultural exploration</p>
+                <h5 class="card-title fw-bold" data-translate="education">Education & Culture</h5>
+                <p class="card-text category-description" data-translate="educationCultureDesc">Learning, history, and
+                  cultural exploration</p>
                 <div class="category-meta">
-                  <span class="badge bg-success">24+ Podcasts</span>
+                  <span class="badge bg-success">24+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -320,10 +335,11 @@
                 <div class="category-overlay"></div>
               </div>
               <div class="card-body text-center p-4">
-                <h5 class="card-title fw-bold">General</h5>
-                <p class="card-text category-description">Diverse topics and general interest content</p>
+                <h5 class="card-title fw-bold" data-translate="general">General</h5>
+                <p class="card-text category-description" data-translate="generalDesc">Diverse topics and general
+                  interest content</p>
                 <div class="category-meta">
-                  <span class="badge bg-primary">15+ Podcasts</span>
+                  <span class="badge bg-primary">15+ <span data-translate="podcastsText">Podcasts</span></span>
                 </div>
               </div>
             </div>
@@ -336,8 +352,9 @@
   <section id="features" class="py-5 features-section dark-section">
     <div class="container">
       <div class="text-center mb-5">
-        <h2 class="display-5 fw-bold mb-3 text-white">Why Choose Our Platform</h2>
-        <p class="lead text-light">Discover what makes our podcast platform unique and powerful</p>
+        <h2 class="display-5 fw-bold mb-3 text-white" data-translate="whyChoose">Why Choose Our Platform</h2>
+        <p class="lead text-light" data-translate="whyChooseSubtitle">Discover what makes our podcast platform unique
+          and powerful</p>
       </div>
 
       <div class="row g-4">
@@ -347,8 +364,9 @@
             <div class="feature-icon">
               <i class="fas fa-search text-primary"></i>
             </div>
-            <h4 class="feature-title">Smart Discovery</h4>
-            <p class="feature-description">Advanced AI-powered recommendations help you discover podcasts tailored to
+            <h4 class="feature-title" data-translate="smartDiscovery">Smart Discovery</h4>
+            <p class="feature-description" data-translate="smartDesc">Advanced AI-powered recommendations help you
+              discover podcasts tailored to
               your interests and listening habits.</p>
             <div class="feature-highlight">
               <span class="badge bg-primary">AI Powered</span>
@@ -362,8 +380,9 @@
             <div class="feature-icon">
               <i class="fas fa-cloud-download-alt text-primary"></i>
             </div>
-            <h4 class="feature-title">Offline Listening</h4>
-            <p class="feature-description">Download your favorite episodes and listen anywhere, anytime without an
+            <h4 class="feature-title" data-translate="offlineListening">Offline Listening</h4>
+            <p class="feature-description" data-translate="offlineDesc">Download your favorite episodes and listen
+              anywhere, anytime without an
               internet connection.</p>
             <div class="feature-highlight">
               <span class="badge bg-success">Offline Ready</span>
@@ -377,8 +396,9 @@
             <div class="feature-icon">
               <i class="fas fa-users text-primary"></i>
             </div>
-            <h4 class="feature-title">Community Features</h4>
-            <p class="feature-description">Connect with fellow listeners, share reviews, and join discussions about your
+            <h4 class="feature-title" data-translate="communityFeatures">Community Features</h4>
+            <p class="feature-description" data-translate="communityDesc">Connect with fellow listeners, share reviews,
+              and join discussions about your
               favorite podcasts.</p>
             <div class="feature-highlight">
               <span class="badge bg-info">Social</span>
@@ -392,8 +412,9 @@
             <div class="feature-icon">
               <i class="fas fa-sync-alt text-primary"></i>
             </div>
-            <h4 class="feature-title">Cross-Platform Sync</h4>
-            <p class="feature-description">Seamlessly sync your listening progress across all your devices - phone,
+            <h4 class="feature-title" data-translate="crossPlatform">Cross-Platform Sync</h4>
+            <p class="feature-description" data-translate="crossPlatformDesc">Seamlessly sync your listening progress
+              across all your devices - phone,
               tablet, and desktop.</p>
             <div class="feature-highlight">
               <span class="badge bg-warning text-dark">Multi-Device</span>
@@ -407,8 +428,9 @@
             <div class="feature-icon">
               <i class="fas fa-chart-line text-primary"></i>
             </div>
-            <h4 class="feature-title">Analytics & Insights</h4>
-            <p class="feature-description">Track your listening habits with detailed analytics and get personalized
+            <h4 class="feature-title" data-translate="analytics">Analytics & Insights</h4>
+            <p class="feature-description" data-translate="analyticsDesc">Track your listening habits with detailed
+              analytics and get personalized
               insights about your podcast journey.</p>
             <div class="feature-highlight">
               <span class="badge bg-secondary">Analytics</span>
@@ -422,8 +444,9 @@
             <div class="feature-icon">
               <i class="fas fa-shield-alt text-primary"></i>
             </div>
-            <h4 class="feature-title">Ad-Free Experience</h4>
-            <p class="feature-description">Enjoy uninterrupted listening with our premium ad-free experience and
+            <h4 class="feature-title" data-translate="adFree">Ad-Free Experience</h4>
+            <p class="feature-description" data-translate="adFreeDesc">Enjoy uninterrupted listening with our premium
+              ad-free experience and
               exclusive content access.</p>
             <div class="feature-highlight">
               <span class="badge bg-danger">Premium</span>
@@ -434,13 +457,13 @@
 
       <!-- Call to Action -->
       <div class="text-center mt-5">
-        <h3 class="mb-4">Ready to Experience the Future of Podcasting?</h3>
+        <h3 class="mb-4" data-translate="readyExperience">Ready to Experience the Future of Podcasting?</h3>
         <div class="d-flex gap-3 justify-content-center flex-wrap">
           <a href="#categories" class="btn btn-primary btn-lg rounded-pill px-4">
-            <i class="fas fa-rocket me-2"></i>Get Started
+            <i class="fas fa-rocket me-2"></i><span data-translate="getStarted">Get Started</span>
           </a>
           <a href="#newsletter" class="btn btn-outline-primary btn-lg rounded-pill px-4">
-            <i class="fas fa-envelope me-2"></i>Stay Updated
+            <i class="fas fa-envelope me-2"></i><span data-translate="stayUpdated">Stay Updated</span>
           </a>
         </div>
       </div>
@@ -453,8 +476,8 @@
       <div class="row align-items-center">
         <div class="col-lg-6" data-aos="fade-right">
           <div class="what-is-podcast-content">
-            <h2 class="display-5 fw-bold mb-4 text-white">What Is A Podcast?</h2>
-            <p class="lead mb-4 text-light">
+            <h2 class="display-5 fw-bold mb-4 text-white" data-translate="whatIsPodcastTitle">What Is A Podcast?</h2>
+            <p class="lead mb-4 text-light" data-translate="whatIsPodcastDesc">
               A podcast is a digital audio program that you can download or stream on your device. Think of it as your
               personal radio show that you can listen to anytime, anywhere.
             </p>
@@ -464,8 +487,9 @@
                   <i class="fas fa-download text-white"></i>
                 </div>
                 <div>
-                  <h5 class="mb-2 text-white">Download & Listen Offline</h5>
-                  <p class="text-light mb-0">Save episodes to your device and listen without an internet connection.</p>
+                  <h5 class="mb-2 text-white" data-translate="downloadListen">Download & Listen Offline</h5>
+                  <p class="text-light mb-0" data-translate="downloadDesc">Save episodes to your device and listen
+                    without an internet connection.</p>
                 </div>
               </div>
               <div class="feature-item d-flex align-items-start mb-3">
@@ -473,8 +497,9 @@
                   <i class="fas fa-clock text-white"></i>
                 </div>
                 <div>
-                  <h5 class="mb-2 text-white">Listen On Your Schedule</h5>
-                  <p class="text-light mb-0">Pause, rewind, fast-forward - control your listening experience.</p>
+                  <h5 class="mb-2 text-white" data-translate="listenSchedule">Listen On Your Schedule</h5>
+                  <p class="text-light mb-0" data-translate="scheduleDesc">Pause, rewind, fast-forward - control your
+                    listening experience.</p>
                 </div>
               </div>
               <div class="feature-item d-flex align-items-start mb-3">
@@ -482,18 +507,19 @@
                   <i class="fas fa-globe text-white"></i>
                 </div>
                 <div>
-                  <h5 class="mb-2 text-white">Diverse Content</h5>
-                  <p class="text-light mb-0">From education to entertainment, find content that matches your interests.
+                  <h5 class="mb-2 text-white" data-translate="diverseContent">Diverse Content</h5>
+                  <p class="text-light mb-0" data-translate="diverseDesc">From education to entertainment, find content
+                    that matches your interests.
                   </p>
                 </div>
               </div>
             </div>
             <div class="mt-4">
               <a href="#categories" class="btn btn-primary btn-lg rounded-pill me-3">
-                <i class="fas fa-play me-2"></i>Start Listening
+                <i class="fas fa-play me-2"></i><span data-translate="startListening">Start Listening</span>
               </a>
               <a href="#contact" class="btn btn-outline-primary btn-lg rounded-pill">
-                <i class="fas fa-question-circle me-2"></i>Learn More
+                <i class="fas fa-question-circle me-2"></i><span data-translate="learnMore">Learn More</span>
               </a>
             </div>
           </div>
@@ -540,8 +566,9 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="display-5 fw-bold mb-3 text-white">Get In Touch</h2>
-            <p class="lead text-light">Have questions, suggestions, or want to submit a podcast? We'd love to hear from
+            <h2 class="display-5 fw-bold mb-3 text-white" data-translate="getInTouch">Get In Touch</h2>
+            <p class="lead text-light" data-translate="getInTouchDesc">Have questions, suggestions, or want to submit a
+              podcast? We'd love to hear from
               you!</p>
           </div>
         </div>
@@ -555,8 +582,8 @@
                 <div class="form-icon">
                   <i class="fas fa-envelope-open"></i>
                 </div>
-                <h4 class="text-white mb-2">Send us a message</h4>
-                <p class="text-light opacity-75">We'll get back to you within 24 hours</p>
+                <h4 class="text-white mb-2" data-translate="sendMessage">Send us a message</h4>
+                <p class="text-light opacity-75" data-translate="getBack">We'll get back to you within 24 hours</p>
               </div>
 
               <div class="row g-4">
@@ -565,8 +592,9 @@
                     <div class="input-icon">
                       <i class="fas fa-user"></i>
                     </div>
-                    <input type="text" class="modern-input" id="firstName" placeholder="Enter your first name" required>
-                    <label for="firstName" class="modern-label">First Name</label>
+                    <input type="text" class="modern-input" id="firstName" placeholder="Enter your first name"
+                      data-translate-placeholder="firstNamePlaceholder" required>
+                    <label for="firstName" class="modern-label" data-translate="firstName">First Name</label>
                     <div class="input-border"></div>
                   </div>
                 </div>
@@ -575,8 +603,9 @@
                     <div class="input-icon">
                       <i class="fas fa-user"></i>
                     </div>
-                    <input type="text" class="modern-input" id="lastName" placeholder="Enter your last name" required>
-                    <label for="lastName" class="modern-label">Last Name</label>
+                    <input type="text" class="modern-input" id="lastName" placeholder="Enter your last name"
+                      data-translate-placeholder="lastNamePlaceholder" required>
+                    <label for="lastName" class="modern-label" data-translate="lastName">Last Name</label>
                     <div class="input-border"></div>
                   </div>
                 </div>
@@ -585,8 +614,9 @@
                     <div class="input-icon">
                       <i class="fas fa-envelope"></i>
                     </div>
-                    <input type="email" class="modern-input" id="email" placeholder="Enter your email address" required>
-                    <label for="email" class="modern-label">Email Address</label>
+                    <input type="email" class="modern-input" id="email" placeholder="Enter your email address"
+                      data-translate-placeholder="emailPlaceholder" required>
+                    <label for="email" class="modern-label" data-translate="emailAddress">Email Address</label>
                     <div class="input-border"></div>
                   </div>
                 </div>
@@ -597,13 +627,14 @@
                     </div>
                     <select class="modern-select" id="subject" required>
                       <option value="" disabled selected hidden></option>
-                      <option value="general">General Inquiry</option>
-                      <option value="podcast-submission">Podcast Submission</option>
-                      <option value="technical-support">Technical Support</option>
-                      <option value="partnership">Partnership Opportunity</option>
-                      <option value="feedback">Feedback</option>
+                      <option value="general" data-translate="generalInquiry">General Inquiry</option>
+                      <option value="podcast-submission" data-translate="podcastSubmission">Podcast Submission</option>
+                      <option value="technical-support" data-translate="technicalSupport">Technical Support</option>
+                      <option value="partnership" data-translate="partnershipOpportunity">Partnership Opportunity
+                      </option>
+                      <option value="feedback" data-translate="feedback">Feedback</option>
                     </select>
-                    <label for="subject" class="modern-label">Subject</label>
+                    <label for="subject" class="modern-label" data-translate="subject">Subject</label>
                     <div class="input-border"></div>
                     <div class="select-arrow">
                       <i class="fas fa-chevron-down"></i>
@@ -616,8 +647,9 @@
                       <i class="fas fa-comment"></i>
                     </div>
                     <textarea class="modern-textarea" id="message" rows="4"
-                      placeholder="Tell us about your inquiry, feedback, or podcast submission..." required></textarea>
-                    <label for="message" class="modern-label">Your Message</label>
+                      placeholder="Tell us about your inquiry, feedback, or podcast submission..."
+                      data-translate-placeholder="messagePlaceholder" required></textarea>
+                    <label for="message" class="modern-label" data-translate="yourMessage">Your Message</label>
                     <div class="input-border"></div>
                   </div>
                 </div>
@@ -628,14 +660,15 @@
                       <div class="checkbox-box">
                         <i class="fas fa-check"></i>
                       </div>
-                      <span>Subscribe to our newsletter for updates on new podcasts</span>
+                      <span data-translate="newsletterSubscribe">Subscribe to our newsletter for updates on new
+                        podcasts</span>
                     </label>
                   </div>
                 </div>
                 <div class="col-12 text-center">
                   <button type="submit" class="modern-submit-btn">
                     <span class="btn-text">
-                      <i class="fas fa-paper-plane me-2"></i>Send Message
+                      <i class="fas fa-paper-plane me-2"></i><span data-translate="sendMessageBtn">Send Message</span>
                     </span>
                     <div class="btn-bg"></div>
                     <div class="btn-ripple"></div>
@@ -654,7 +687,7 @@
             <div class="contact-icon">
               <i class="fas fa-envelope"></i>
             </div>
-            <h5 class="text-white mb-2">Email Us</h5>
+            <h5 class="text-white mb-2" data-translate="emailUs">Email Us</h5>
             <p class="text-light mb-0">hello@podcastslibrary.com</p>
           </div>
         </div>
@@ -663,8 +696,9 @@
             <div class="contact-icon">
               <i class="fas fa-podcast"></i>
             </div>
-            <h5 class="text-white mb-2">Submit Podcast</h5>
-            <p class="text-light mb-0">Share your amazing content with our community</p>
+            <h5 class="text-white mb-2" data-translate="submitPodcast">Submit Podcast</h5>
+            <p class="text-light mb-0" data-translate="submitPodcastDesc">Share your amazing content with our community
+            </p>
           </div>
         </div>
         <div class="col-md-4">
@@ -672,8 +706,8 @@
             <div class="contact-icon">
               <i class="fas fa-headset"></i>
             </div>
-            <h5 class="text-white mb-2">Support</h5>
-            <p class="text-light mb-0">We're here to help you 24/7</p>
+            <h5 class="text-white mb-2" data-translate="support">Support</h5>
+            <p class="text-light mb-0" data-translate="supportDesc">We're here to help you 24/7</p>
           </div>
         </div>
       </div>

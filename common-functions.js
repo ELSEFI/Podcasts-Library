@@ -127,13 +127,14 @@ document.addEventListener('DOMContentLoaded', function () {
     const savedTheme = localStorage.getItem('theme');
     if (savedTheme === 'dark') {
         document.body.classList.add('dark-theme');
-        document.getElementById('themeIcon').className = 'fas fa-sun';
+        const themeIcon = document.getElementById('themeIcon');
+        if (themeIcon) {
+            themeIcon.className = 'fas fa-sun';
+        }
     }
 
-    // Load saved language - Force English mode to prevent mirroring
-    const savedLanguage = localStorage.getItem('language');
-    // Force English/LTR mode
-    changeLanguage('en');
+    // Language system now handled by simple-language-toggle.js
+    console.log('Language system handled by separate file');
 
     // Add enter key support for search
     const searchInput = document.getElementById('navSearchInput');
@@ -161,28 +162,29 @@ document.addEventListener('click', function (e) {
 });
 
 // Language change functionality
-function changeLanguage(lang) {
-    const body = document.body;
-    const languageButton = document.getElementById('languageDropdown');
-
-    if (lang === 'ar') {
-        body.classList.add('rtl');
-        body.setAttribute('dir', 'rtl');
-        languageButton.innerHTML = '<i class="fas fa-globe"></i> AR';
-
-        // Update text content to Arabic
-        updateTextToArabic();
-        localStorage.setItem('language', 'ar');
-    } else {
-        body.classList.remove('rtl');
-        body.setAttribute('dir', 'ltr');
-        languageButton.innerHTML = '<i class="fas fa-globe"></i> EN';
-
-        // Update text content to English
-        updateTextToEnglish();
-        localStorage.setItem('language', 'en');
-    }
-}
+// Old language function - disabled to prevent conflicts with simple-language-toggle.js
+// function changeLanguage(lang) {
+//     const body = document.body;
+//     const languageButton = document.getElementById('languageDropdown');
+//
+//     if (lang === 'ar') {
+//         body.classList.add('rtl');
+//         body.setAttribute('dir', 'rtl');
+//         languageButton.innerHTML = '<i class="fas fa-globe"></i> AR';
+//
+//         // Update text content to Arabic
+//         updateTextToArabic();
+//         localStorage.setItem('language', 'ar');
+//     } else {
+//         body.classList.remove('rtl');
+//         body.setAttribute('dir', 'ltr');
+//         languageButton.innerHTML = '<i class="fas fa-globe"></i> EN';
+//
+//         // Update text content to English
+//         updateTextToEnglish();
+//         localStorage.setItem('language', 'en');
+//     }
+// }
 
 // Update text to Arabic - Base function (to be customized per page)
 function updateTextToArabic() {

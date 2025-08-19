@@ -699,3 +699,119 @@
         right: 50px;
     }
 }
+
+/* Control buttons - make them same size */
+#themeToggle,
+#languageToggle {
+    width: 40px !important;
+    height: 36px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 0 !important;
+    border-radius: 6px !important;
+}
+
+#themeToggle i,
+#languageToggle i {
+    font-size: 14px !important;
+}
+
+/* Language notification animation */
+@keyframes slideIn {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* RTL support - Force LTR for layout consistency */
+body.rtl,
+body.ltr {
+    direction: ltr !important;
+}
+
+/* Ensure stat cards numbers are always centered */
+.stat-card .counter,
+.stat-card h3 {
+    text-align: center !important;
+}
+
+.stat-card .stat-label,
+.stat-card p {
+    text-align: center !important;
+}
+
+/* Ensure all cards maintain center alignment */
+.card-body {
+    text-align: center !important;
+}
+
+.text-center {
+    text-align: center !important;
+}
+
+/* Override any RTL specific alignments */
+[dir="rtl"] .text-center,
+[dir="ltr"] .text-center {
+    text-align: center !important;
+}
+
+/* Force center alignment for stats */
+.stat-card-inner {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.stat-icon {
+    text-align: center !important;
+}
+
+/* Specific fixes for hero section stats */
+.hero-section .stat-card,
+.hero-section .col-md-4 {
+    text-align: center !important;
+}
+
+.hero-section .counter,
+.hero-section .display-4 {
+    text-align: center !important;
+    justify-content: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+.hero-section .stat-label {
+    text-align: center !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
+/* Navbar items should remain in their positions */
+.navbar-nav {
+    direction: ltr !important;
+}
+
+.navbar-nav .nav-item {
+    text-align: left !important;
+}

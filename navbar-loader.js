@@ -38,6 +38,8 @@ function loadNavbar() {
 
             // Initialize navbar functionality after loading
             initializeNavbarFunctionality();
+
+            // Language toggle handled by separate file
         })
         .catch(error => {
             console.error('Error loading navbar:', error);
@@ -100,18 +102,11 @@ function initializeNavbarFunctionality() {
         });
     }
 
-    // Language toggle functionality
+    // Language toggle functionality - handled by language-manager.js
+    // Just ensure the button exists, the LanguageManager will handle the rest
     const languageToggle = document.getElementById('languageToggle');
     if (languageToggle) {
-        languageToggle.addEventListener('click', function () {
-            const currentLang = document.documentElement.lang || 'en';
-            const newLang = currentLang === 'en' ? 'ar' : 'en';
-            document.documentElement.lang = newLang;
-            localStorage.setItem('language', newLang);
-
-            // You can add more language switching logic here
-            console.log('Language switched to:', newLang);
-        });
+        console.log('Language toggle button found and ready');
     }
 
     // Modern Inline Search functionality
@@ -385,3 +380,135 @@ function updateResultsCount() {
 document.addEventListener('DOMContentLoaded', function () {
     initializeFilters();
 });
+
+// Filter functionality for podcast categories
+function initializeFilters() {
+    const filterButtons = document.querySelectorAll('.filter-btn');
+    const podcastCards = document.querySelectorAll('.podcast-card');
+
+    if (filterButtons.length === 0) return; // Not a category page
+
+    filterButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            // Remove active class from all buttons
+            filterButtons.forEach(btn => btn.classList.remove('active'));
+
+            // Add active class to clicked button
+            this.classList.add('active');
+
+            const filter = this.getAttribute('data-filter');
+
+            // Show/hide podcast cards based on filter
+            podcastCards.forEach(card => {
+                if (filter === 'all' || card.getAttribute('data-category') === filter) {
+                    card.style.display = 'block';
+                    card.style.animation = 'fadeIn 0.3s ease';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Update results count
+            updateResultsCount();
+        });
+    });
+
+    // Initial count
+    updateResultsCount();
+}
+
+function updateResultsCount() {
+    const visibleCards = document.querySelectorAll('.podcast-card[style*="block"], .podcast-card:not([style*="none"])');
+    const resultsCount = document.getElementById('results-count');
+
+    if (resultsCount) {
+        resultsCount.textContent = visibleCards.length;
+    }
+}
+
+// Initialize filters when DOM is loaded
+document.addEventListener('DOMContentLoaded', function () {
+    initializeFilters();
+}); function applyLanguage(lang) {
+    document.documentElement.lang = lang;
+
+    // Apply RTL for Arabic
+    if (lang === 'ar') {
+        document.documentElement.dir = 'rtl';
+        document.body.classList.add('rtl');
+    } else {
+        document.documentElement.dir = 'ltr';
+        document.body.classList.remove('rtl');
+    }
+
+    // Translate all elements with data-translate attribute
+    translatePage(lang);
+
+    console.log('Language applied:', lang);
+}
+
+function updateLanguageIcon(lang) {
+    const languageToggle = document.getElementById('languageToggle');
+    if (languageToggle) {
+        const icon = languageToggle.querySelector('i');
+        if (icon) {
+            // Update the button content to show current language
+            if (lang === 'ar') {
+                languageToggle.innerHTML = '<span class="me-1">العربية</span><i class="fas fa-globe"></i>';
+                languageToggle.title = 'Switch to English';
+            } else {
+                languageToggle.innerHTML = '<span class="me-1">English</span><i class="fas fa-globe"></i>';
+                languageToggle.title = 'التبديل إلى العربية';
+            }
+        }
+    }
+}
+
+function translatePage(lang) {
+    const elements = document.querySelectorAll('[data-translate]');
+    elements.forEach(element => {
+        const key = element.getAttribute('data-translate');
+        if (translations[lang] && translations[lang][key]) {
+            if (element.placeholder !== undefined) {
+                element.placeholder = translations[lang][key];
+            } else {
+                element.textContent = translations[lang][key];
+            }
+        }
+    });
+
+    // Update select options
+    updateSelectOptions(lang);
+}
+
+function updateSelectOptions(lang) {
+    // Update contact form subject options
+    const subjectSelect = document.getElementById('subject');
+    if (subjectSelect) {
+        const options = subjectSelect.querySelectorAll('option');
+        options.forEach(option => {
+            const value = option.value;
+            switch (value) {
+                case 'general':
+                    option.textContent = translations[lang]['generalInquiry'];
+                    break;
+                case 'podcast-submission':
+                    option.textContent = translations[lang]['podcastSubmission'];
+                    break;
+                case 'technical-support':
+                    option.textContent = translations[lang]['technicalSupport'];
+                    break;
+                case 'partnership':
+                    option.textContent = translations[lang]['partnership'];
+                    break;
+                case 'feedback':
+                    option.textContent = translations[lang]['feedback'];
+                    break;
+            }
+        });
+    }
+}
+
+// Language functionality moved to simple-language-toggle.js to avoid conflicts

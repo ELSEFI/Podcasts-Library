@@ -5,6 +5,28 @@
     overflow: hidden;
 }
 
+/* Layout Consistency - Force LTR and Center Alignment */
+* {
+    direction: ltr !important;
+}
+
+.text-center,
+.card-body,
+.stat-card,
+.stat-card-inner {
+    text-align: center !important;
+    direction: ltr !important;
+}
+
+.counter,
+.display-4,
+.stat-label {
+    text-align: center !important;
+    direction: ltr !important;
+    display: block !important;
+    margin: 0 auto !important;
+}
+
 #what-is-podcast::before {
     content: '';
     position: absolute;
@@ -1442,6 +1464,122 @@
             0 10px 25px rgba(0, 123, 255, 0.3),
             0 0 20px rgba(0, 123, 255, 0.1);
     }
+}
+
+/* RTL Support for Arabic */
+.rtl {
+    direction: rtl;
+}
+
+/* Remove problematic navbar RTL styles */
+/*
+.rtl .navbar-nav {
+    flex-direction: row-reverse;
+}
+
+.rtl .navbar-brand {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.rtl .dropdown-menu {
+    right: 0;
+    left: auto;
+}
+*/
+
+/* Form RTL adjustments */
+.rtl .modern-input-group .input-icon {
+    left: auto;
+    right: 20px;
+}
+
+.rtl .modern-label {
+    left: auto;
+    right: 60px;
+}
+
+.rtl .modern-input,
+.rtl .modern-select,
+.rtl .modern-textarea {
+    padding: 20px 60px 20px 20px;
+    text-align: right;
+}
+
+.rtl .select-arrow {
+    right: auto;
+    left: 20px;
+}
+
+/* Text alignment for RTL */
+.rtl .text-start {
+    text-align: right !important;
+}
+
+.rtl .text-end {
+    text-align: left !important;
+}
+
+/* Content RTL adjustments */
+.rtl .card-body {
+    text-align: right;
+}
+
+.rtl .lead {
+    text-align: right;
+}
+
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl h5,
+.rtl h6 {
+    text-align: right;
+}
+
+.rtl p {
+    text-align: right;
+}
+
+/* Button spacing adjustments for RTL */
+.rtl .me-2 {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+.rtl .ms-auto {
+    margin-left: 0 !important;
+    margin-right: auto !important;
+}
+
+/* Prevent reflection of icons and images in RTL */
+.rtl .category-icon,
+.rtl .form-icon,
+.rtl .input-icon,
+.rtl .fas,
+.rtl .fab,
+.rtl .far {
+    transform: none !important;
+}
+
+/* Hero section RTL */
+.rtl .hero-section {
+    text-align: right;
+}
+
+/* Categories section RTL */
+.rtl #categories {
+    text-align: right;
+}
+
+/* Contact form RTL */
+.rtl .contact-form {
+    text-align: right;
+}
+
+.rtl .form-header {
+    text-align: right;
 }
 
 /* Apply glow animation on hover */

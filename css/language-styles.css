@@ -1,0 +1,162 @@
+/* Language-specific styling fixes */
+/* language-styles.css */
+
+/* Fix for Arabic text direction without affecting navbar layout */
+.rtl {
+    direction: rtl;
+}
+
+/* Prevent navbar from being affected by RTL */
+.rtl .navbar,
+.rtl .navbar-nav,
+.rtl .navbar-brand {
+    direction: ltr !important;
+}
+
+/* Only apply RTL to content areas */
+.rtl .hero-section .container,
+.rtl #categories .container-fluid,
+.rtl #what-is-podcast .container,
+.rtl #contact .container {
+    direction: rtl;
+}
+
+/* Ensure proper text alignment for RTL content */
+.rtl .hero-section .text-center,
+.rtl #categories .text-center,
+.rtl #what-is-podcast .text-center,
+.rtl #contact .text-center {
+    text-align: center !important;
+}
+
+/* Fix button spacing in RTL */
+.rtl .btn .fas,
+.rtl .btn .far,
+.rtl .btn .fab {
+    margin-left: 0.5rem;
+    margin-right: 0;
+}
+
+/* Ensure icons don't flip in RTL */
+.rtl .fas,
+.rtl .far,
+.rtl .fab,
+.rtl .category-icon,
+.rtl .form-icon,
+.rtl .input-icon {
+    transform: none !important;
+    direction: ltr;
+}
+
+/* Fix category cards in RTL */
+.rtl .category-item .card-body {
+    text-align: center !important;
+}
+
+/* Form elements RTL styling */
+.rtl .modern-input,
+.rtl .modern-select,
+.rtl .modern-textarea {
+    text-align: right;
+    direction: rtl;
+}
+
+.rtl .modern-input::placeholder,
+.rtl .modern-select::placeholder,
+.rtl .modern-textarea::placeholder {
+    text-align: right;
+    direction: rtl;
+}
+
+/* Fix dropdown menu positioning in RTL */
+.rtl .dropdown-menu {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* Ensure proper spacing for RTL text */
+.rtl h1,
+.rtl h2,
+.rtl h3,
+.rtl h4,
+.rtl h5,
+.rtl h6 {
+    font-family: 'Arial', sans-serif;
+}
+
+.rtl p,
+.rtl .lead {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.8;
+}
+
+/* Language toggle button styling */
+#languageToggle {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#languageToggle span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Smooth transition for language changes */
+.language-transition {
+    transition: all 0.3s ease;
+}
+
+/* Arabic font improvements */
+[lang="ar"] {
+    font-family: 'Segoe UI', 'Tahoma', 'Arial', sans-serif;
+}
+
+[lang="ar"] h1,
+[lang="ar"] h2,
+[lang="ar"] h3,
+[lang="ar"] h4,
+[lang="ar"] h5,
+[lang="ar"] h6 {
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+[lang="ar"] .lead {
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* Fix card titles and descriptions in categories */
+.rtl .card-title {
+    text-align: center !important;
+    direction: rtl;
+}
+
+.rtl .card-text {
+    text-align: center !important;
+    direction: rtl;
+}
+
+/* Ensure hero section text is properly aligned */
+.rtl .hero-section h1 {
+    text-align: center !important;
+}
+
+.rtl .hero-section p {
+    text-align: center !important;
+}
+
+/* Contact form improvements for RTL */
+.rtl .contact-form .form-header {
+    text-align: center !important;
+}
+
+.rtl .contact-form h4 {
+    text-align: center !important;
+}
+
+.rtl .contact-form p {
+    text-align: center !important;
+}
