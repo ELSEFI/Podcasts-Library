@@ -565,7 +565,7 @@
                     <div class="input-icon">
                       <i class="fas fa-user"></i>
                     </div>
-                    <input type="text" class="modern-input" id="firstName" placeholder="First Name" required>
+                    <input type="text" class="modern-input" id="firstName" placeholder="Enter your first name" required>
                     <label for="firstName" class="modern-label">First Name</label>
                     <div class="input-border"></div>
                   </div>
@@ -575,7 +575,7 @@
                     <div class="input-icon">
                       <i class="fas fa-user"></i>
                     </div>
-                    <input type="text" class="modern-input" id="lastName" placeholder="Last Name" required>
+                    <input type="text" class="modern-input" id="lastName" placeholder="Enter your last name" required>
                     <label for="lastName" class="modern-label">Last Name</label>
                     <div class="input-border"></div>
                   </div>
@@ -585,7 +585,7 @@
                     <div class="input-icon">
                       <i class="fas fa-envelope"></i>
                     </div>
-                    <input type="email" class="modern-input" id="email" placeholder="Email Address" required>
+                    <input type="email" class="modern-input" id="email" placeholder="Enter your email address" required>
                     <label for="email" class="modern-label">Email Address</label>
                     <div class="input-border"></div>
                   </div>
@@ -615,8 +615,8 @@
                     <div class="input-icon">
                       <i class="fas fa-comment"></i>
                     </div>
-                    <textarea class="modern-textarea" id="message" rows="4" placeholder="Your Message"
-                      required></textarea>
+                    <textarea class="modern-textarea" id="message" rows="4"
+                      placeholder="Tell us about your inquiry, feedback, or podcast submission..." required></textarea>
                     <label for="message" class="modern-label">Your Message</label>
                     <div class="input-border"></div>
                   </div>
@@ -885,10 +885,10 @@
 
 
 
-
+  <!-- 
   <hr>
-  <footer>
-    <!-- <ul class="wrapper" id="wrapper">
+  <footer> -->
+  <!-- <ul class="wrapper" id="wrapper">
       <li class="icon facebook">
         <span class="tooltip">Facebook</span>
         <svg viewBox="0 0 320 512" height="1.2em" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
@@ -916,29 +916,29 @@
       </li>
     </ul> -->
 
-    <section class="">
-      <!-- Footer -->
-      <footer class="text-center text-white footer-dark dark-section">
-        <!-- Grid container -->
-        <div class="container p-4 pb-0">
-          <!-- Section: CTA -->
-          <section class="">
-            <p class="d-flex justify-content-center align-items-center">
-              <a class="me-3" href="#categories">Explore More Podcasts</a>
-            </p>
-          </section>
-          <!-- Section: CTA -->
-        </div>
-        <!-- Grid container -->
+  <section class="">
+    <!-- Footer -->
+    <footer class="text-center text-white footer-dark dark-section">
+      <!-- Grid container -->
+      <div class="container p-4 pb-0">
+        <!-- Section: CTA -->
+        <section class="">
+          <p class="d-flex justify-content-center align-items-center">
+            <a class="me-3" href="#categories">Explore More Podcasts</a>
+          </p>
+        </section>
+        <!-- Section: CTA -->
+      </div>
+      <!-- Grid container -->
 
-        <!-- Copyright -->
-        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-          © 2024 Podcasts Library - All Rights Reserved
-        </div>
-        <!-- Copyright -->
-      </footer>
-      <!-- Footer -->
-    </section>
+      <!-- Copyright -->
+      <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        © 2024 Podcasts Library - All Rights Reserved
+      </div>
+      <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+  </section>
 
   </footer>
 
@@ -1058,6 +1058,13 @@
       // Function to check and update label state
       function updateLabelState(input) {
         const label = input.nextElementSibling;
+        const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+
+        // Only manipulate labels in light mode
+        if (!isLightMode) {
+          return;
+        }
+
         if (input.value && input.value.trim() !== '') {
           label.style.transform = 'translateY(-35px) scale(0.85)';
           label.style.color = '#007bff';
@@ -1072,6 +1079,13 @@
       modernInputs.forEach(input => {
         // Handle focus events
         input.addEventListener('focus', function () {
+          const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+
+          // Only manipulate labels in light mode
+          if (!isLightMode) {
+            return;
+          }
+
           const label = this.nextElementSibling;
           label.style.transform = 'translateY(-35px) scale(0.85)';
           label.style.color = '#007bff';
@@ -1105,6 +1119,13 @@
 
         // Also handle focus/blur for select
         modernSelect.addEventListener('focus', function () {
+          const isLightMode = document.documentElement.getAttribute('data-theme') === 'light';
+
+          // Only manipulate labels in light mode
+          if (!isLightMode) {
+            return;
+          }
+
           const label = this.nextElementSibling;
           label.style.transform = 'translateY(-35px) scale(0.85)';
           label.style.color = '#007bff';

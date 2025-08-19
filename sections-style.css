@@ -519,14 +519,44 @@
 [data-theme="light"] .modern-input::placeholder,
 [data-theme="light"] .modern-select::placeholder,
 [data-theme="light"] .modern-textarea::placeholder {
-    color: #999999 !important;
-    opacity: 1 !important;
-    font-weight: 400 !important;
+    color: #666666 !important;
+    opacity: 0.8 !important;
+}
+
+/* Additional placeholder visibility for light mode */
+[data-theme="light"] .modern-input::-webkit-input-placeholder {
+    color: #666666 !important;
+    opacity: 0.8 !important;
+}
+
+[data-theme="light"] .modern-input::-moz-placeholder {
+    color: #666666 !important;
+    opacity: 0.8 !important;
+}
+
+[data-theme="light"] .modern-input:-ms-input-placeholder {
+    color: #666666 !important;
+    opacity: 0.8 !important;
+}
+
+[data-theme="light"] .modern-textarea::-webkit-input-placeholder {
+    color: #666666 !important;
+    opacity: 0.8 !important;
+}
+
+[data-theme="light"] .modern-textarea::-moz-placeholder {
+    color: #666666 !important;
+    opacity: 0.8 !important;
+}
+
+[data-theme="light"] .modern-textarea:-ms-input-placeholder {
+    color: #666666 !important;
+    opacity: 0.8 !important;
 }
 
 [data-theme="light"] .modern-label {
-    color: #999999 !important;
-    font-weight: 500 !important;
+    color: #666666 !important;
+    display: block !important;
 }
 
 [data-theme="light"] .modern-input:focus+.modern-label,
@@ -538,31 +568,10 @@
 [data-theme="light"] .modern-textarea:not(:placeholder-shown)+.modern-label,
 [data-theme="light"] .modern-textarea[value]:not([value=""])+.modern-label {
     color: #007bff !important;
-    font-weight: 600 !important;
 }
 
 [data-theme="light"] .modern-select[value=""]+.modern-label:not(:focus) {
-    color: #999999 !important;
-    font-weight: 500 !important;
-}
-
-/* Light Mode - Enhanced Label Visibility */
-[data-theme="light"] .modern-input:focus+.modern-label {
-    background: rgba(255, 255, 255, 0.9) !important;
-    padding: 2px 8px !important;
-    border-radius: 4px !important;
-}
-
-[data-theme="light"] .modern-select:focus+.modern-label {
-    background: rgba(255, 255, 255, 0.9) !important;
-    padding: 2px 8px !important;
-    border-radius: 4px !important;
-}
-
-[data-theme="light"] .modern-textarea:focus+.modern-label {
-    background: rgba(255, 255, 255, 0.9) !important;
-    padding: 2px 8px !important;
-    border-radius: 4px !important;
+    color: #666666 !important;
 }
 
 [data-theme="light"] .input-icon {
@@ -769,6 +778,11 @@
     pointer-events: none;
     transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     z-index: 1;
+}
+
+/* Hide labels in dark mode - show only placeholder text */
+.modern-label {
+    display: none !important;
 }
 
 .input-border {
