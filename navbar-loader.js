@@ -16,6 +16,26 @@ function loadNavbar() {
             // Insert navbar at the beginning of body
             document.body.insertAdjacentHTML('afterbegin', data);
 
+            // Fix logo path for GitHub Pages
+            setTimeout(() => {
+                const logo = document.getElementById('navbar-logo');
+                if (logo) {
+                    // Check if we're on GitHub Pages
+                    if (window.location.hostname.includes('github.io')) {
+                        const repoName = window.location.pathname.split('/')[1];
+                        if (repoName && repoName !== 'index.html') {
+                            logo.src = `/${repoName}/image/logo.jpeg`;
+                        }
+                    }
+                    
+                    // Add error handler to fallback to original image if needed
+                    logo.onerror = function() {
+                        this.src = 'image/_d1959416-a926-4cf5-ae6e-82a5c2d3802b.jpeg';
+                        this.onerror = null; // Prevent infinite loop
+                    };
+                }
+            }, 100);
+
             // Initialize navbar functionality after loading
             initializeNavbarFunctionality();
         })
