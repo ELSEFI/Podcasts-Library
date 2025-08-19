@@ -27,9 +27,9 @@ function loadNavbar() {
                             logo.src = `/${repoName}/image/logo.jpeg`;
                         }
                     }
-                    
+
                     // Add error handler to fallback to original image if needed
-                    logo.onerror = function() {
+                    logo.onerror = function () {
                         this.src = 'image/_d1959416-a926-4cf5-ae6e-82a5c2d3802b.jpeg';
                         this.onerror = null; // Prevent infinite loop
                     };
