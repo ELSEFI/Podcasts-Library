@@ -550,57 +550,94 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <div class="contact-form-container" data-aos="fade-up" data-aos-delay="200">
-            <form class="contact-form">
+            <form class="contact-form modern-form">
+              <div class="form-header mb-4">
+                <div class="form-icon">
+                  <i class="fas fa-envelope-open"></i>
+                </div>
+                <h4 class="text-white mb-2">Send us a message</h4>
+                <p class="text-light opacity-75">We'll get back to you within 24 hours</p>
+              </div>
+
               <div class="row g-4">
                 <div class="col-md-6">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="firstName" placeholder="First Name" required>
-                    <label for="firstName"><i class="fas fa-user me-2"></i>First Name</label>
+                  <div class="modern-input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <input type="text" class="modern-input" id="firstName" required>
+                    <label for="firstName" class="modern-label">First Name</label>
+                    <div class="input-border"></div>
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <div class="form-floating">
-                    <input type="text" class="form-control" id="lastName" placeholder="Last Name" required>
-                    <label for="lastName"><i class="fas fa-user me-2"></i>Last Name</label>
+                  <div class="modern-input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-user"></i>
+                    </div>
+                    <input type="text" class="modern-input" id="lastName" required>
+                    <label for="lastName" class="modern-label">Last Name</label>
+                    <div class="input-border"></div>
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="form-floating">
-                    <input type="email" class="form-control" id="email" placeholder="Email Address" required>
-                    <label for="email"><i class="fas fa-envelope me-2"></i>Email Address</label>
+                  <div class="modern-input-group">
+                    <div class="input-icon">
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <input type="email" class="modern-input" id="email" required>
+                    <label for="email" class="modern-label">Email Address</label>
+                    <div class="input-border"></div>
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="form-floating">
-                    <select class="form-select" id="subject" required>
-                      <option value="">Choose a subject</option>
+                  <div class="modern-select-group">
+                    <div class="input-icon">
+                      <i class="fas fa-tag"></i>
+                    </div>
+                    <select class="modern-select" id="subject" required>
+                      <option value="" disabled selected hidden></option>
                       <option value="general">General Inquiry</option>
                       <option value="podcast-submission">Podcast Submission</option>
                       <option value="technical-support">Technical Support</option>
                       <option value="partnership">Partnership Opportunity</option>
                       <option value="feedback">Feedback</option>
                     </select>
-                    <label for="subject"><i class="fas fa-tag me-2"></i>Subject</label>
+                    <label for="subject" class="modern-label">Subject</label>
+                    <div class="input-border"></div>
+                    <div class="select-arrow">
+                      <i class="fas fa-chevron-down"></i>
+                    </div>
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="form-floating">
-                    <textarea class="form-control" id="message" placeholder="Your Message" style="height: 120px"
-                      required></textarea>
-                    <label for="message"><i class="fas fa-comment me-2"></i>Your Message</label>
+                  <div class="modern-textarea-group">
+                    <div class="input-icon">
+                      <i class="fas fa-comment"></i>
+                    </div>
+                    <textarea class="modern-textarea" id="message" rows="4" required></textarea>
+                    <label for="message" class="modern-label">Your Message</label>
+                    <div class="input-border"></div>
                   </div>
                 </div>
                 <div class="col-12">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" id="newsletter" value="">
-                    <label class="form-check-label text-light" for="newsletter">
-                      Subscribe to our newsletter for updates on new podcasts
+                  <div class="modern-checkbox-group">
+                    <input class="modern-checkbox" type="checkbox" id="newsletter" value="">
+                    <label class="modern-checkbox-label" for="newsletter">
+                      <div class="checkbox-box">
+                        <i class="fas fa-check"></i>
+                      </div>
+                      <span>Subscribe to our newsletter for updates on new podcasts</span>
                     </label>
                   </div>
                 </div>
                 <div class="col-12 text-center">
-                  <button type="submit" class="btn btn-primary btn-lg rounded-pill px-5">
-                    <i class="fas fa-paper-plane me-2"></i>Send Message
+                  <button type="submit" class="modern-submit-btn">
+                    <span class="btn-text">
+                      <i class="fas fa-paper-plane me-2"></i>Send Message
+                    </span>
+                    <div class="btn-bg"></div>
+                    <div class="btn-ripple"></div>
                   </button>
                 </div>
               </div>
@@ -1014,6 +1051,70 @@
     document.addEventListener('DOMContentLoaded', function () {
       const contactForm = document.querySelector('.contact-form');
 
+      // Modern form interactions
+      const modernInputs = document.querySelectorAll('.modern-input, .modern-select, .modern-textarea');
+
+      // Function to check and update label state
+      function updateLabelState(input) {
+        const label = input.nextElementSibling;
+        if (input.value && input.value.trim() !== '') {
+          label.style.transform = 'translateY(-35px) scale(0.85)';
+          label.style.color = '#007bff';
+          label.style.fontWeight = '600';
+        } else if (document.activeElement !== input) {
+          label.style.transform = 'translateY(-50%) scale(1)';
+          label.style.color = 'rgba(255, 255, 255, 0.7)';
+          label.style.fontWeight = 'normal';
+        }
+      }
+
+      modernInputs.forEach(input => {
+        // Handle focus events
+        input.addEventListener('focus', function () {
+          const label = this.nextElementSibling;
+          label.style.transform = 'translateY(-35px) scale(0.85)';
+          label.style.color = '#007bff';
+          label.style.fontWeight = '600';
+        });
+
+        // Handle blur events
+        input.addEventListener('blur', function () {
+          updateLabelState(this);
+        });
+
+        // Handle input events (real-time typing)
+        input.addEventListener('input', function () {
+          updateLabelState(this);
+        });
+
+        // Check initial state on page load
+        updateLabelState(input);
+      });
+
+      // Special handling for select element
+      const modernSelect = document.getElementById('subject');
+      if (modernSelect) {
+        // Set initial state
+        modernSelect.value = '';
+        updateLabelState(modernSelect);
+        
+        modernSelect.addEventListener('change', function () {
+          updateLabelState(this);
+        });
+        
+        // Also handle focus/blur for select
+        modernSelect.addEventListener('focus', function() {
+          const label = this.nextElementSibling;
+          label.style.transform = 'translateY(-35px) scale(0.85)';
+          label.style.color = '#007bff';
+          label.style.fontWeight = '600';
+        });
+        
+        modernSelect.addEventListener('blur', function() {
+          updateLabelState(this);
+        });
+      }
+
       if (contactForm) {
         contactForm.addEventListener('submit', function (e) {
           e.preventDefault();
@@ -1040,9 +1141,10 @@
           }
 
           // Show loading state
-          const submitBtn = this.querySelector('button[type="submit"]');
-          const originalText = submitBtn.innerHTML;
-          submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
+          const submitBtn = this.querySelector('.modern-submit-btn') || this.querySelector('button[type="submit"]');
+          const btnText = submitBtn.querySelector('.btn-text') || submitBtn;
+          const originalText = btnText.innerHTML;
+          btnText.innerHTML = '<i class="fas fa-spinner fa-spin me-2"></i>Sending...';
           submitBtn.disabled = true;
 
           // Simulate form submission (replace with actual submission logic)
@@ -1052,8 +1154,22 @@
             // Reset form
             this.reset();
 
+            // Reset all labels to initial state
+            modernInputs.forEach(input => {
+              const label = input.nextElementSibling;
+              label.style.transform = 'translateY(-50%) scale(1)';
+              label.style.color = 'rgba(255, 255, 255, 0.7)';
+              label.style.fontWeight = 'normal';
+            });
+            
+            // Specifically reset select element
+            if (modernSelect) {
+              modernSelect.value = '';
+              updateLabelState(modernSelect);
+            }
+
             // Reset button
-            submitBtn.innerHTML = originalText;
+            btnText.innerHTML = originalText;
             submitBtn.disabled = false;
           }, 2000);
         });
@@ -1127,6 +1243,70 @@
 
   <!-- AOS Library -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+  <!-- Enhanced Card Animations -->
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // Enhanced intersection observer for card animations
+      const observerOptions = {
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'
+      };
+
+      const cardObserver = new IntersectionObserver((entries) => {
+        entries.forEach((entry, index) => {
+          if (entry.isIntersecting) {
+            setTimeout(() => {
+              entry.target.style.opacity = '1';
+              entry.target.style.transform = 'translateY(0) scale(1)';
+            }, index * 100); // Staggered animation
+          }
+        });
+      }, observerOptions);
+
+      // Apply to category cards
+      const categoryCards = document.querySelectorAll('#categories .category-item');
+      categoryCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(30px) scale(0.95)';
+        card.style.transition = 'all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        cardObserver.observe(card);
+      });
+
+      // Apply to feature cards
+      const featureCards = document.querySelectorAll('#features .feature-card');
+      featureCards.forEach((card, index) => {
+        card.style.opacity = '0';
+        card.style.transform = 'translateY(20px) scale(0.9)';
+        card.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        cardObserver.observe(card);
+      });
+
+      // Add hover sound effect simulation (visual feedback)
+      const allCards = document.querySelectorAll('.category-item, .feature-card, .contact-info-card');
+      allCards.forEach(card => {
+        card.addEventListener('mouseenter', function () {
+          this.style.transition = 'all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1)';
+        });
+
+        card.addEventListener('mouseleave', function () {
+          this.style.transition = 'all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+        });
+      });
+
+      // Add click animation
+      allCards.forEach(card => {
+        card.addEventListener('mousedown', function () {
+          this.style.transform = this.style.transform.replace(/scale\([^)]*\)/, '') + ' scale(0.95)';
+        });
+
+        card.addEventListener('mouseup', function () {
+          this.style.transform = this.style.transform.replace(/scale\([^)]*\)/, '');
+        });
+      });
+    });
+  </script>
+
   <script>
     // Initialize AOS
     AOS.init({

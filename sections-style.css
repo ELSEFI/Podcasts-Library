@@ -62,6 +62,63 @@
     z-index: 2;
 }
 
+/* Enhanced animations for category cards */
+#categories .category-item {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow, background;
+}
+
+#categories .category-item:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 10px 25px rgba(0, 123, 255, 0.3),
+        0 0 20px rgba(0, 123, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1) !important;
+}
+
+/* Enhanced animations for feature cards */
+#features .feature-card {
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    will-change: transform, box-shadow, background;
+}
+
+#features .feature-card:hover {
+    transform: translateY(-8px) scale(1.02);
+    background: rgba(255, 255, 255, 0.12) !important;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.4),
+        0 10px 25px rgba(0, 123, 255, 0.2),
+        0 0 15px rgba(0, 123, 255, 0.1);
+}
+
+/* Consistent icon animations */
+#features .feature-icon {
+    transition: all 0.3s ease;
+}
+
+#features .feature-card:hover .feature-icon {
+    transform: scale(1.1) rotateY(10deg);
+    filter: drop-shadow(0 5px 15px rgba(0, 123, 255, 0.3));
+}
+
+/* Category card content animations */
+#categories .category-item:hover .card-title {
+    transform: translateY(-2px);
+    color: #ffffff !important;
+    text-shadow: 0 2px 10px rgba(0, 123, 255, 0.3);
+}
+
+#categories .category-item:hover .category-description {
+    transform: translateY(-1px);
+    color: rgba(255, 255, 255, 0.9) !important;
+}
+
+#categories .category-item:hover .badge {
+    transform: scale(1.05);
+    box-shadow: 0 3px 10px rgba(0, 123, 255, 0.4);
+}
+
 .what-is-podcast-content {
     padding: 2rem 0;
     position: relative;
@@ -283,6 +340,494 @@
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
 }
 
+/* Modern Form Header */
+.form-header {
+    text-align: center;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+    font-size: 2rem;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+    animation: pulse-icon 3s ease-in-out infinite;
+}
+
+@keyframes pulse-icon {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+/* Modern Input Groups */
+.modern-input-group,
+.modern-select-group,
+.modern-textarea-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-icon {
+    position: absolute;
+    left: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.1rem;
+    z-index: 3;
+    transition: all 0.3s ease;
+}
+
+.modern-input,
+.modern-select,
+.modern-textarea {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.08);
+    border: 2px solid rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 20px 20px 20px 60px;
+    color: #fff;
+    font-size: 1rem;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    outline: none;
+    position: relative;
+    z-index: 2;
+}
+
+.modern-input:focus,
+.modern-select:focus,
+.modern-textarea:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border-color: #007bff;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15);
+    transform: translateY(-2px);
+}
+
+.modern-input:focus+.modern-label,
+.modern-select:focus+.modern-label,
+.modern-textarea:focus+.modern-label,
+.modern-input:not(:placeholder-shown)+.modern-label,
+.modern-input[value]:not([value=""])+.modern-label,
+.modern-select:not([value=""])+.modern-label,
+.modern-textarea:not(:placeholder-shown)+.modern-label,
+.modern-textarea[value]:not([value=""])+.modern-label {
+    transform: translateY(-35px) scale(0.85);
+    color: #007bff;
+    font-weight: 600;
+}
+
+/* Force select with empty value to keep label in place */
+.modern-select[value=""] + .modern-label:not(:focus) {
+    transform: translateY(-50%) scale(1) !important;
+    color: rgba(255, 255, 255, 0.7) !important;
+    font-weight: normal !important;
+}
+
+.modern-input:focus~.input-icon,
+.modern-select:focus~.input-icon,
+.modern-textarea:focus~.input-icon {
+    color: #007bff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.modern-label {
+    position: absolute;
+    left: 60px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 1rem;
+    pointer-events: none;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    z-index: 1;
+}
+
+.input-border {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    transform: translateX(-50%);
+    border-radius: 1px;
+}
+
+.modern-input:focus~.input-border,
+.modern-select:focus~.input-border,
+.modern-textarea:focus~.input-border {
+    width: 100%;
+}
+
+/* Modern Select Styling */
+.modern-select-group {
+    position: relative;
+}
+
+.modern-select {
+    appearance: none;
+    cursor: pointer;
+}
+
+.modern-select option {
+    background: #1a1a1a;
+    color: #fff;
+    padding: 10px;
+}
+
+.select-arrow {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.6);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 3;
+}
+
+.modern-select:focus~.select-arrow {
+    color: #007bff;
+    transform: translateY(-50%) rotate(180deg);
+}
+
+/* Modern Textarea */
+.modern-textarea {
+    min-height: 120px;
+    resize: vertical;
+    padding-top: 20px;
+}
+
+.modern-textarea-group .input-icon {
+    top: 40px;
+}
+
+.modern-textarea-group .modern-label {
+    top: 40px;
+}
+
+/* Modern Checkbox */
+.modern-checkbox-group {
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+}
+
+.modern-checkbox {
+    display: none;
+}
+
+.modern-checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.checkbox-box {
+    width: 24px;
+    height: 24px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 6px;
+    margin-right: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.checkbox-box i {
+    color: white;
+    font-size: 0.8rem;
+    opacity: 0;
+    transform: scale(0);
+    transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.modern-checkbox:checked+.modern-checkbox-label .checkbox-box {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border-color: #007bff;
+    transform: scale(1.05);
+}
+
+.modern-checkbox:checked+.modern-checkbox-label .checkbox-box i {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.checkbox-box::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 4px;
+    transform: scale(0);
+    transition: transform 0.3s ease;
+}
+
+.modern-checkbox:checked+.modern-checkbox-label .checkbox-box::after {
+    transform: scale(1);
+    animation: checkbox-ripple 0.6s ease;
+}
+
+@keyframes checkbox-ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(1.5);
+        opacity: 0;
+    }
+}
+
+/* Modern Submit Button */
+.modern-submit-btn {
+    position: relative;
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    border: none;
+    border-radius: 50px;
+    padding: 18px 40px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.3);
+    min-width: 200px;
+}
+
+.modern-submit-btn:hover {
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 123, 255, 0.4);
+}
+
+.modern-submit-btn:active {
+    transform: translateY(-1px) scale(1.02);
+}
+
+.btn-text {
+    position: relative;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #0056b3, #007bff);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modern-submit-btn:hover .btn-bg {
+    opacity: 1;
+}
+
+.btn-ripple {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.6s ease;
+}
+
+.modern-submit-btn:active .btn-ripple {
+    width: 300px;
+    height: 300px;
+}
+
+/* Error states */
+.modern-input-group.error .modern-input,
+.modern-select-group.error .modern-select,
+.modern-textarea-group.error .modern-textarea {
+    border-color: #dc3545 !important;
+    background: rgba(220, 53, 69, 0.1) !important;
+}
+
+.modern-input-group.error .input-icon,
+.modern-select-group.error .input-icon,
+.modern-textarea-group.error .input-icon {
+    color: #dc3545 !important;
+}
+
+.modern-input-group.error .modern-label,
+.modern-select-group.error .modern-label,
+.modern-textarea-group.error .modern-label {
+    color: #dc3545 !important;
+}
+
+.modern-input-group.error .input-border,
+.modern-select-group.error .input-border,
+.modern-textarea-group.error .input-border {
+    background: #dc3545 !important;
+    width: 100% !important;
+}
+
+/* Success states */
+.modern-input:valid,
+.modern-select:valid,
+.modern-textarea:valid {
+    border-color: #28a745;
+}
+
+.modern-input:valid~.input-icon,
+.modern-select:valid~.input-icon,
+.modern-textarea:valid~.input-icon {
+    color: #28a745;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .contact-form {
+        padding: 2rem 1.5rem;
+    }
+
+    .form-icon {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+
+    .modern-input,
+    .modern-select,
+    .modern-textarea {
+        padding: 16px 16px 16px 50px;
+        font-size: 0.95rem;
+    }
+
+    .input-icon {
+        left: 15px;
+        font-size: 1rem;
+    }
+
+    .modern-label {
+        left: 50px;
+        font-size: 0.95rem;
+    }
+
+    .modern-submit-btn {
+        padding: 16px 32px;
+        font-size: 1rem;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contact-form {
+        padding: 1.5rem 1rem;
+    }
+
+    .modern-input,
+    .modern-select,
+    .modern-textarea {
+        padding: 14px 14px 14px 45px;
+    }
+
+    .input-icon {
+        left: 12px;
+    }
+
+    .modern-label {
+        left: 45px;
+    }
+
+    .modern-submit-btn {
+        width: 100%;
+        min-width: auto;
+    }
+
+    .modern-checkbox-label {
+        font-size: 0.9rem;
+    }
+}
+
+/* Additional animations for modern form */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.modern-form {
+    animation: fadeInScale 0.6s ease-out;
+}
+
+.modern-input-group,
+.modern-select-group,
+.modern-textarea-group,
+.modern-checkbox-group {
+    animation: slideInUp 0.5s ease-out backwards;
+}
+
+.modern-input-group:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.modern-input-group:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.modern-input-group:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+.modern-select-group:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+.modern-textarea-group:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+.modern-checkbox-group {
+    animation-delay: 0.6s;
+}
+
+.modern-submit-btn {
+    animation: fadeInScale 0.6s ease-out 0.7s backwards;
+}
+
+/* Legacy form controls - keeping for backward compatibility */
 .contact-form .form-control,
 .contact-form .form-select {
     background: rgba(255, 255, 255, 0.1);
@@ -424,4 +969,154 @@
 .btn-outline-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 8px 25px rgba(0, 123, 255, 0.2);
+}
+
+/* Entrance animations for cards */
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Apply entrance animations */
+#categories .category-item {
+    animation: slideInUp 0.6s ease-out;
+    animation-fill-mode: both;
+}
+
+#features .feature-card {
+    animation: fadeInScale 0.8s ease-out;
+    animation-fill-mode: both;
+}
+
+/* Staggered animation delays for better visual effect */
+#categories .category-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+#categories .category-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+#categories .category-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+#categories .category-item:nth-child(4) {
+    animation-delay: 0.4s;
+}
+
+#categories .category-item:nth-child(5) {
+    animation-delay: 0.5s;
+}
+
+#categories .category-item:nth-child(6) {
+    animation-delay: 0.6s;
+}
+
+#categories .category-item:nth-child(7) {
+    animation-delay: 0.7s;
+}
+
+#categories .category-item:nth-child(8) {
+    animation-delay: 0.8s;
+}
+
+#categories .category-item:nth-child(9) {
+    animation-delay: 0.9s;
+}
+
+#categories .category-item:nth-child(10) {
+    animation-delay: 1.0s;
+}
+
+#features .feature-card:nth-child(1) {
+    animation-delay: 0.2s;
+}
+
+#features .feature-card:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+#features .feature-card:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+#features .feature-card:nth-child(4) {
+    animation-delay: 0.8s;
+}
+
+#features .feature-card:nth-child(5) {
+    animation-delay: 1.0s;
+}
+
+#features .feature-card:nth-child(6) {
+    animation-delay: 1.2s;
+}
+
+/* Pulse animation for icons */
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Add subtle pulse to feature icons on hover */
+#features .feature-card:hover .feature-icon {
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+/* Glowing border animation for category cards */
+@keyframes glow {
+    0% {
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.4),
+            0 10px 25px rgba(0, 123, 255, 0.3),
+            0 0 20px rgba(0, 123, 255, 0.1);
+    }
+
+    50% {
+        box-shadow:
+            0 25px 50px rgba(0, 0, 0, 0.5),
+            0 15px 35px rgba(0, 123, 255, 0.4),
+            0 0 30px rgba(0, 123, 255, 0.2);
+    }
+
+    100% {
+        box-shadow:
+            0 20px 40px rgba(0, 0, 0, 0.4),
+            0 10px 25px rgba(0, 123, 255, 0.3),
+            0 0 20px rgba(0, 123, 255, 0.1);
+    }
+}
+
+/* Apply glow animation on hover */
+#categories .category-item:hover {
+    animation: glow 2s ease-in-out infinite;
 }
