@@ -173,18 +173,32 @@ function initializeNavbarFunctionality() {
 }
 
 function applyTheme(theme) {
+    // Add smooth transition
+    document.body.style.transition = 'all 0.3s ease';
+
+    // Apply theme to both body and html elements for compatibility
     document.body.setAttribute('data-theme', theme);
+    document.documentElement.setAttribute('data-theme', theme);
     const themeIcon = document.getElementById('themeIcon');
 
     if (themeIcon) {
-        if (theme === 'dark') {
+        if (theme === 'light') {
             themeIcon.className = 'fas fa-sun';
-            document.body.classList.add('dark-theme');
+            themeIcon.parentElement.title = 'Switch to Dark Mode';
+            document.body.classList.remove('dark-theme');
         } else {
             themeIcon.className = 'fas fa-moon';
-            document.body.classList.remove('dark-theme');
+            themeIcon.parentElement.title = 'Switch to Light Mode';
+            document.body.classList.add('dark-theme');
         }
     }
+
+    // Remove transition after animation completes
+    setTimeout(() => {
+        document.body.style.transition = '';
+    }, 300);
+
+    console.log('Applied theme:', theme); // Debug log
 }
 
 function performInlineSearch() {

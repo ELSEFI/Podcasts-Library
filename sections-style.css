@@ -16,6 +16,23 @@
     pointer-events: none;
 }
 
+/* Light Mode - What Is Podcast Section */
+[data-theme="light"] #what-is-podcast {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+}
+
+[data-theme="light"] #what-is-podcast::before {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain-light" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23007bff" opacity="0.1"/><circle cx="80" cy="80" r="1" fill="%23007bff" opacity="0.1"/><circle cx="40" cy="60" r="1" fill="%23007bff" opacity="0.1"/><circle cx="60" cy="40" r="1" fill="%23007bff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain-light)"/></svg>') repeat;
+}
+
+[data-theme="light"] #what-is-podcast h2 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] #what-is-podcast p {
+    color: #333333 !important;
+}
+
 /* Features Section (Why Choose Our Platform) Styles */
 #features {
     background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
@@ -34,9 +51,43 @@
     pointer-events: none;
 }
 
+/* Light Mode - Features Section */
+[data-theme="light"] #features {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+}
+
+[data-theme="light"] #features::before {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain-features-light" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23007bff" opacity="0.1"/><circle cx="80" cy="80" r="1" fill="%23007bff" opacity="0.1"/><circle cx="40" cy="60" r="1" fill="%23007bff" opacity="0.1"/><circle cx="60" cy="40" r="1" fill="%23007bff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain-features-light)"/></svg>') repeat;
+}
+
+[data-theme="light"] #features h2 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] #features .card {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 123, 255, 0.2) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] #features .card h5 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] #features .card p {
+    color: #333333 !important;
+}
+
 #features .container {
     position: relative;
     z-index: 2;
+}
+
+/* Categories Section (Browse Categories) Styles */
+#categories {
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+    position: relative;
+    overflow: hidden;
 }
 
 /* Categories Section (Browse Categories) Styles */
@@ -55,6 +106,33 @@
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain-categories" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="80" cy="80" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="40" cy="60" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="60" cy="40" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain-categories)"/></svg>') repeat;
     pointer-events: none;
+}
+
+/* Light Mode - Categories Section */
+[data-theme="light"] #categories {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+}
+
+[data-theme="light"] #categories::before {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain-categories-light" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23007bff" opacity="0.1"/><circle cx="80" cy="80" r="1" fill="%23007bff" opacity="0.1"/><circle cx="40" cy="60" r="1" fill="%23007bff" opacity="0.1"/><circle cx="60" cy="40" r="1" fill="%23007bff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain-categories-light)"/></svg>') repeat;
+}
+
+[data-theme="light"] #categories h2 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] #categories p {
+    color: #333333 !important;
+}
+
+[data-theme="light"] #categories .card {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 123, 255, 0.2) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] #categories .card h5 {
+    color: #000000 !important;
 }
 
 #categories .container-fluid {
@@ -324,6 +402,242 @@
     bottom: 0;
     background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="80" cy="80" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="40" cy="60" r="1" fill="%23ffffff" opacity="0.05"/><circle cx="60" cy="40" r="1" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>') repeat;
     pointer-events: none;
+}
+
+/* Light Mode - Contact Section */
+[data-theme="light"] #contact {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 50%, #e9ecef 100%);
+}
+
+[data-theme="light"] #contact::before {
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain-contact-light" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="20" cy="20" r="1" fill="%23007bff" opacity="0.1"/><circle cx="80" cy="80" r="1" fill="%23007bff" opacity="0.1"/><circle cx="40" cy="60" r="1" fill="%23007bff" opacity="0.1"/><circle cx="60" cy="40" r="1" fill="%23007bff" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain-contact-light)"/></svg>') repeat;
+}
+
+[data-theme="light"] #contact h2 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] #contact p {
+    color: #333333 !important;
+}
+
+[data-theme="light"] .contact-form {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 123, 255, 0.2) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-form .form-header {
+    border-bottom: 1px solid rgba(0, 123, 255, 0.2) !important;
+}
+
+[data-theme="light"] .contact-form h3 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-info-card {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 123, 255, 0.2) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-info-card h5 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-info-card p {
+    color: #333333 !important;
+}
+
+/* Light Mode - Form Elements */
+[data-theme="light"] .contact-form .form-control,
+[data-theme="light"] .contact-form .form-select {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 1px solid rgba(0, 123, 255, 0.3) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-form .form-control:focus,
+[data-theme="light"] .contact-form .form-select:focus {
+    background: #ffffff !important;
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-form .form-control::placeholder {
+    color: #666666 !important;
+}
+
+[data-theme="light"] .contact-form .form-floating>label {
+    color: #333333 !important;
+}
+
+[data-theme="light"] .contact-form .form-floating>.form-control:focus~label,
+[data-theme="light"] .contact-form .form-floating>.form-control:not(:placeholder-shown)~label,
+[data-theme="light"] .contact-form .form-floating>.form-select~label {
+    color: #007bff !important;
+}
+
+[data-theme="light"] .contact-form .form-select option {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-form .form-check-input {
+    background-color: #ffffff !important;
+    border-color: #007bff !important;
+}
+
+[data-theme="light"] .contact-form .form-check-input:checked {
+    background-color: #007bff !important;
+    border-color: #007bff !important;
+}
+
+[data-theme="light"] .contact-form .form-check-label {
+    color: #333333 !important;
+}
+
+/* Light Mode - Modern Form Inputs */
+[data-theme="light"] .modern-input,
+[data-theme="light"] .modern-select,
+[data-theme="light"] .modern-textarea {
+    background: rgba(255, 255, 255, 0.9) !important;
+    border: 2px solid rgba(0, 123, 255, 0.2) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] .modern-input:focus,
+[data-theme="light"] .modern-select:focus,
+[data-theme="light"] .modern-textarea:focus {
+    background: #ffffff !important;
+    border-color: #007bff !important;
+    box-shadow: 0 0 0 4px rgba(0, 123, 255, 0.15) !important;
+    color: #000000 !important;
+}
+
+[data-theme="light"] .modern-input::placeholder,
+[data-theme="light"] .modern-select::placeholder,
+[data-theme="light"] .modern-textarea::placeholder {
+    color: #999999 !important;
+    opacity: 1 !important;
+    font-weight: 400 !important;
+}
+
+[data-theme="light"] .modern-label {
+    color: #999999 !important;
+    font-weight: 500 !important;
+}
+
+[data-theme="light"] .modern-input:focus+.modern-label,
+[data-theme="light"] .modern-select:focus+.modern-label,
+[data-theme="light"] .modern-textarea:focus+.modern-label,
+[data-theme="light"] .modern-input:not(:placeholder-shown)+.modern-label,
+[data-theme="light"] .modern-input[value]:not([value=""])+.modern-label,
+[data-theme="light"] .modern-select:not([value=""])+.modern-label,
+[data-theme="light"] .modern-textarea:not(:placeholder-shown)+.modern-label,
+[data-theme="light"] .modern-textarea[value]:not([value=""])+.modern-label {
+    color: #007bff !important;
+    font-weight: 600 !important;
+}
+
+[data-theme="light"] .modern-select[value=""]+.modern-label:not(:focus) {
+    color: #999999 !important;
+    font-weight: 500 !important;
+}
+
+/* Light Mode - Enhanced Label Visibility */
+[data-theme="light"] .modern-input:focus+.modern-label {
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+}
+
+[data-theme="light"] .modern-select:focus+.modern-label {
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+}
+
+[data-theme="light"] .modern-textarea:focus+.modern-label {
+    background: rgba(255, 255, 255, 0.9) !important;
+    padding: 2px 8px !important;
+    border-radius: 4px !important;
+}
+
+[data-theme="light"] .input-icon {
+    color: #666666 !important;
+}
+
+[data-theme="light"] .modern-input:focus~.input-icon,
+[data-theme="light"] .modern-select:focus~.input-icon,
+[data-theme="light"] .modern-textarea:focus~.input-icon {
+    color: #007bff !important;
+}
+
+[data-theme="light"] .input-border {
+    background: linear-gradient(90deg, #007bff, #0056b3) !important;
+}
+
+/* Light Mode - Select Options */
+[data-theme="light"] .modern-select option {
+    background: #ffffff !important;
+    color: #000000 !important;
+}
+
+/* Light Mode - Checkbox */
+[data-theme="light"] .modern-checkbox {
+    background: #ffffff !important;
+    border: 2px solid #007bff !important;
+}
+
+[data-theme="light"] .modern-checkbox:checked {
+    background: #007bff !important;
+    border-color: #007bff !important;
+}
+
+[data-theme="light"] .checkbox-label {
+    color: #333333 !important;
+}
+
+/* Light Mode - Form Header and Text */
+[data-theme="light"] .form-header h4 {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .form-header p {
+    color: #333333 !important;
+}
+
+[data-theme="light"] .form-header {
+    border-bottom: 1px solid rgba(0, 123, 255, 0.2) !important;
+}
+
+/* Light Mode - Submit Button */
+[data-theme="light"] .modern-submit-btn {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+}
+
+[data-theme="light"] .modern-submit-btn:hover {
+    background: linear-gradient(135deg, #0056b3, #004085) !important;
+}
+
+[data-theme="light"] .btn-text {
+    color: #ffffff !important;
+}
+
+/* Light Mode - Contact Form White Text Fix */
+[data-theme="light"] .contact-form .text-white {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .contact-form .text-light {
+    color: #333333 !important;
+}
+
+[data-theme="light"] .contact-form .opacity-75 {
+    opacity: 1 !important;
 }
 
 .contact-form-container {

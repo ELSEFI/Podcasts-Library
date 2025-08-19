@@ -1,6 +1,5 @@
 // Common JavaScript functions for all pages
 
-// Theme toggle functionality
 // Toggle search bar visibility
 function toggleSearch() {
     const searchCollapse = document.getElementById('searchCollapse');

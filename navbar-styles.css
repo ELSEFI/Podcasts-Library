@@ -13,6 +13,116 @@
     width: 100%;
 }
 
+/* Light Mode - Navbar */
+[data-theme="light"] .navbar-fixed.navbar-black {
+    background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+    box-shadow: 0 4px 20px rgba(0, 123, 255, 0.2) !important;
+    border-bottom: 2px solid #007bff !important;
+}
+
+[data-theme="light"] .brand-text {
+    color: #000000 !important;
+    text-shadow: 2px 2px 4px rgba(0, 123, 255, 0.3) !important;
+}
+
+[data-theme="light"] .navbar-nav .nav-link {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .navbar-nav .nav-link:hover {
+    background: rgba(0, 123, 255, 0.1) !important;
+    color: #007bff !important;
+}
+
+[data-theme="light"] .navbar-nav .nav-link.active {
+    background: linear-gradient(45deg, #007bff, #0056b3) !important;
+    color: #ffffff !important;
+}
+
+[data-theme="light"] .dropdown-menu {
+    background: #ffffff !important;
+    border: 1px solid #007bff !important;
+    box-shadow: 0 10px 30px rgba(0, 123, 255, 0.2) !important;
+}
+
+[data-theme="light"] .dropdown-item {
+    color: #000000 !important;
+}
+
+[data-theme="light"] .dropdown-item:hover {
+    background: linear-gradient(45deg, #007bff, #0056b3) !important;
+    color: #ffffff !important;
+}
+
+/* Light Mode - Control Buttons (Theme, Language, etc.) */
+[data-theme="light"] .btn-outline-light {
+    border: 2px solid rgba(0, 123, 255, 0.5) !important;
+    color: #007bff !important;
+}
+
+[data-theme="light"] .btn-outline-light:hover {
+    background: rgba(0, 123, 255, 0.1) !important;
+    border-color: #007bff !important;
+    color: #0056b3 !important;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3) !important;
+}
+
+/* Light Mode - Hamburger Menu */
+[data-theme="light"] .navbar-toggler {
+    border: 2px solid rgba(0, 123, 255, 0.5) !important;
+    background: rgba(0, 123, 255, 0.1) !important;
+}
+
+[data-theme="light"] .navbar-toggler:hover {
+    border-color: #007bff !important;
+    box-shadow: 0 0 15px rgba(0, 123, 255, 0.4) !important;
+    background: rgba(0, 123, 255, 0.2) !important;
+}
+
+[data-theme="light"] .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.6) !important;
+    border-color: #007bff !important;
+}
+
+[data-theme="light"] .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 123, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2.5' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+}
+
+/* Light Mode - Theme and Language Toggle Icons */
+[data-theme="light"] #themeToggle i,
+[data-theme="light"] #languageToggle i,
+[data-theme="light"] .btn-outline-light i {
+    color: #007bff !important;
+}
+
+[data-theme="light"] #themeToggle:hover i,
+[data-theme="light"] #languageToggle:hover i,
+[data-theme="light"] .btn-outline-light:hover i {
+    color: #0056b3 !important;
+}
+
+/* Light Mode - Search Toggle Button */
+[data-theme="light"] #searchToggleBtn {
+    color: #007bff !important;
+}
+
+[data-theme="light"] #searchToggleBtn:hover {
+    color: #0056b3 !important;
+}
+
+/* Light Mode - Mobile Menu Collapsed State */
+@media (max-width: 991.98px) {
+    [data-theme="light"] .navbar-collapse {
+        background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%) !important;
+        border: 1px solid #007bff !important;
+        box-shadow: 0 8px 32px rgba(0, 123, 255, 0.2) !important;
+    }
+
+    [data-theme="light"] .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 123, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important;
+    }
+}
+
 /* Brand styling */
 .navbar-brand {
     font-weight: bold;
@@ -363,7 +473,6 @@
 .search-input {
     padding: 0.5rem 1rem;
     font-size: 0.9rem;
-}
 }
 
 /* Smooth animations */
