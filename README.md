@@ -1,10 +1,19 @@
 # 🎧 Podcasts Library
 
-**Podcasts Library** is a modern, multilingual web-based platform designed to organize and present a diverse collection of podcasts, categorized by themes such as Art, Business, Science, Health, Self-development, and more. The goal of this project is to provide users with an engaging and accessible environment to explore and listen to valuable podcast content across different areas of interest.
 
-![HTML](https://img.shields.io/badge/HTML-40.9%25-orange?style=for-the-badge&logo=html5&logoColor=white)
-![CSS](https://img.shields.io/badge/CSS-38.4%25-blue?style=for-the-badge&logo=css3&logoColor=white)
-![JavaScript](https://img.shields.io/badge/JavaScript-20.7%25-yellow?style=for-the-badge&logo=javascript&logoColor=black)
+<div align="center">
+
+![HTML](https://img.shields.io/badge/HTML-40.9%25-orange.svg)
+![CSS](https://img.shields.io/badge/CSS-38.4%25-blue.svg)
+![JavaScript](https://img.shields.io/badge/JavaScript-20.7%25-yellow.svg)
+![License](https://img.shields.io/badge/License-MIT-green.svg)
+
+****Podcasts Library** is a modern, multilingual web-based platform designed to organize and present a diverse collection of podcasts, categorized by themes such as Art, Business, Science, Health, Self-development, and more. The goal of this project is to provide users with an engaging and accessible environment to explore and listen to valuable podcast content across different areas of interest.**
+
+[Live Demo](https://elsefi.github.io/Podcasts-Library) • [Report Bug](https://github.com/ELSEFI/Podcasts-Library/issues) • [Request Feature](https://github.com/ELSEFI/Podcasts-Library/issues)
+
+</div>
+
 
 ## 🌐 Features
 
